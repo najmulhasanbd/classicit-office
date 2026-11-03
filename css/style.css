@@ -5173,3 +5173,123 @@ textarea.form-control {
   font-size: 0.74rem;
   color: var(--clr-text-muted);
 }
+
+
+/* ============================================================
+   TECH STACK PAGE STYLES (.tech-card-lg, .tech-filter-nav, etc.)
+   ============================================================ */
+.tech-card-lg {
+  background: var(--clr-card-bg);
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  transition: transform var(--tr-normal), box-shadow var(--tr-normal), border-color var(--tr-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.tech-card-icon-lg {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  transition: transform var(--tr-normal);
+}
+
+.tech-card-lg:hover .tech-card-icon-lg {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.tech-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--clr-dark);
+  margin-bottom: 2px;
+}
+
+.tech-card-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tech-card-desc {
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.tech-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.tech-badge-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--clr-bg-light);
+  color: var(--clr-text-body);
+  border: 1px solid var(--clr-border);
+}
+
+/* Category filter navigation */
+.tech-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+
+.tech-filter-btn {
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: var(--clr-white);
+  border: 1.5px solid var(--clr-border);
+  color: var(--clr-text-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--tr-fast);
+}
+
+.tech-filter-btn:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  transform: translateY(-2px);
+}
+
+.tech-filter-btn.active {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: var(--clr-white);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}

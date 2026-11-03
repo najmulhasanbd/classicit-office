@@ -1731,6 +1731,50 @@
     });
   }
 
+  /* ============================================================
+     12B. TECH STACK FILTER (tech.html)
+     ============================================================ */
+  function initTechFilter() {
+    const btns  = document.querySelectorAll('.tech-filter-btn');
+    const items = document.querySelectorAll('.tech-card-col');
+    if (!btns.length || !items.length) return;
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        btns.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-tech-filter');
+
+        items.forEach((item) => {
+          const cat = item.getAttribute('data-tech-cat') || '';
+          const visible = filter === 'all' || cat.split(' ').includes(filter);
+
+          if (typeof gsap !== 'undefined') {
+            if (visible) {
+              gsap.fromTo(item,
+                { opacity: 0, scale: 0.92, y: 15 },
+                { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'power2.out',
+                  onStart: () => { item.style.display = ''; }
+                }
+              );
+            } else {
+              gsap.to(item, {
+                opacity: 0,
+                scale: 0.92,
+                duration: 0.25,
+                ease: 'power2.in',
+                onComplete: () => { item.style.display = 'none'; }
+              });
+            }
+          } else {
+            item.style.display = visible ? '' : 'none';
+          }
+        });
+      });
+    });
+  }
+
   /* ══════════════════════════════════════════════
      13. FAQ ACCORDION (GSAP smooth height)
   ══════════════════════════════════════════════ */
@@ -1883,6 +1927,9 @@
     });
   }
 
+  /* ============================================================
+     12B. TECH STACK FILTER (tech.html)
+     ============================================================ */
   /* ══════════════════════════════════════════════
      DIRECTION-AWARE HOVER (Left / Right Sweep for Buttons & Menus)
   ══════════════════════════════════════════════ */
@@ -2116,6 +2163,9 @@
     });
   }
 
+  /* ============================================================
+     12B. TECH STACK FILTER (tech.html)
+     ============================================================ */
   /* ══════════════════════════════════════════════
      19. CLIENT PROCESS RADIAL ARCH JOURNEY (8-STAGE COLLABORATION)
   ══════════════════════════════════════════════ */
@@ -2736,6 +2786,7 @@
     initCounters();
     initSwiper();
     initPortfolioFilter();
+    initTechFilter();
     initFAQ();
     initScrollTop();
     initContactForm();
