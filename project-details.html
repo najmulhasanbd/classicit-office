@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Multi-Vendor Marketplace Platform Case Study | Classic IT</title>
+  <meta name="description" content="Read how Classic IT engineered a resilient, high-concurrency multi-vendor marketplace platform with microservices, Redis caching, 99.99% uptime, and +140% GMV growth." />
+  <meta name="keywords" content="Multi-vendor marketplace case study, e-commerce software Bangladesh, high concurrency Laravel, Redis caching architecture, Classic IT projects, software development case study" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Classic IT" />
+  <link rel="canonical" href="https://classicit.com.bd/project-details.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Multi-Vendor Marketplace Platform Case Study | Classic IT" />
+  <meta property="og:description" content="Discover how Classic IT scaled a digital marketplace to handle 45,000 concurrent checkouts with 99.99% uptime and microservices architecture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://classicit.com.bd/project-details.html" />
+  <meta property="og:image" content="https://classicit.com.bd/images/portfolio-ecommerce.jpg" />
+  <meta property="og:site_name" content="Classic IT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multi-Vendor Marketplace Platform Case Study | Classic IT" />
+  <meta name="twitter:description" content="High-concurrency multi-tenant marketplace platform case study." />
+  <meta name="twitter:image" content="https://classicit.com.bd/images/portfolio-ecommerce.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%232563eb'/><text y='.9em' font-size='70' x='12' fill='white' font-family='Arial' font-weight='900'>C</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css" />
+
+  <!-- Odometer CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=2.2" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Multi-Vendor Marketplace Platform Engineering Case Study",
+    "description": "How Classic IT engineered an enterprise multi-vendor e-commerce platform delivering 99.99% uptime and 3.8x scale.",
+    "author": {
+      "@type": "Organization",
+      "name": "Classic IT"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Classic IT",
+      "logo": "https://classicit.com.bd/images/logo.png"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div id="preloader" role="status" aria-label="Loading Classic IT">
+    <div class="preloader-logo">
+      <img src="images/logo.png" alt="Classic IT" style="max-height: 52px; width: auto;" />
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SEARCH OVERLAY
+  ============================================================ -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for projects, case studies..." aria-label="Search" autocomplete="off" />
+      <button class="search-close" id="searchClose" aria-label="Close search"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       1. TOP INFO BAR
+  ============================================================ -->
+  <div id="topbar" role="banner">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+
+        <!-- Left: contact items -->
+        <div class="d-flex align-items-center flex-wrap gap-1">
+          <span class="top-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+8809678783783">+880 9678-783783</a>
+          </span>
+          <span class="top-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@classicit.com.bd">info@classicit.com.bd</a>
+          </span>
+          <span class="top-contact-item d-none d-md-inline-flex">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Sector # 12, Uttara, Dhaka-1230</span>
+          </span>
+        </div>
+
+        <!-- Right: social icons -->
+        <div class="topbar-socials" aria-label="Social media links">
+          <a href="https://facebook.com/classicit" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       2. STICKY WHITE NAVBAR
+  ============================================================ -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container navbar-inner">
+
+      <!-- Logo -->
+      <a class="navbar-brand-custom" href="index.html" aria-label="Classic IT Home">
+        <img src="images/logo.png" alt="Classic IT" class="site-logo" />
+      </a>
+
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="process.html">Work Process</a></li>
+              <li><a class="dropdown-item" href="tech.html">Tech Stack</a></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html#products" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services.html">E-Commerce Software</a></li>
+              <li><a class="dropdown-item" href="services.html">ERP Software</a></li>
+              <li><a class="dropdown-item" href="services.html">POS Management</a></li>
+              <li><a class="dropdown-item" href="services.html">School Management System</a></li>
+              <li><a class="dropdown-item" href="services.html">Pharmacy Software</a></li>
+              <li><a class="dropdown-item" href="services.html">Courier Management</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="portfolio.html">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#blog">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- Navbar right actions -->
+        <div class="navbar-actions">
+          <button class="nav-search-btn" id="searchBtn" aria-label="Open search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="contact.html" class="btn-quote">
+            <i class="fas fa-paper-plane"></i> <span>Get A Quote</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="mainContent">
+
+    <!-- ============================================================
+         3. PAGE BANNER & BREADCRUMB
+    ============================================================ -->
+    <section class="page-banner" aria-label="Page banner">
+      <div class="container text-center">
+        <span class="page-banner-badge">Enterprise Case Study</span>
+        <h1 class="page-banner-title">Multi-Vendor Marketplace Platform</h1>
+        <p class="page-banner-desc">
+          Engineering a high-concurrency digital marketplace: microservices refactoring, atomic Redis inventory locking, automated vendor ledger split, and zero-downtime flash sale scaling.
+        </p>
+        <!-- Breadcrumb Navigation -->
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="portfolio.html">Projects</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Marketplace Case Study</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. CASE STUDY DEEP DIVE & SIDEBAR
+    ============================================================ -->
+    <section class="section-py bg-white" aria-label="Case study details">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Left Column: Case Study Narrative -->
+          <div class="col-lg-8">
+
+            <!-- Featured Hero Cover Image with dual-image hover -->
+            <div class="project-cover-wrap atf-service-thumb position-relative" aria-label="Multi-Vendor Marketplace Platform UI">
+              <img src="images/portfolio-ecommerce.jpg" alt="Multi-Vendor Marketplace Platform" />
+              <img src="images/portfolio-ecommerce.jpg" alt="Multi-Vendor Marketplace Platform" />
+            </div>
+
+            <!-- Executive Summary -->
+            <div class="mb-5">
+              <span class="project-header-badge"><i class="fas fa-file-lines me-1"></i> Executive Summary</span>
+              <h2 class="h3 fw-bold mb-3 text-dark">Orchestrating High-Volume Commerce at Scale</h2>
+              <p class="lead text-muted mb-3" style="font-size: 1.05rem; line-height: 1.7;">
+                Global Digital Retail Ltd. operates an expansive multi-vendor e-commerce marketplace catering to over 1,200 verified independent merchants and more than 45,000 active daily shoppers across retail fashion, electronics, and fast-moving consumer goods.
+              </p>
+              <p class="text-muted" style="line-height: 1.7;">
+                When sudden viral flash sales and nationwide shopping holidays caused continuous database contention, gateway timeouts, and overselling anomalies in their legacy application, Classic IT was commissioned as the primary architectural partner to design, build, and deploy a modern, distributed commerce infrastructure.
+              </p>
+            </div>
+
+            <!-- Key Performance Metrics Grid -->
+            <div class="mb-5">
+              <h3 class="h4 fw-bold mb-4 text-dark"><i class="fas fa-chart-line text-primary me-2"></i> Measurable Engineering Impact</h3>
+              <div class="row g-3">
+                <div class="col-sm-6 col-md-3">
+                  <div class="project-metric-card">
+                    <div class="project-metric-number">99.99%</div>
+                    <div class="project-metric-label">Uptime SLA</div>
+                    <p class="project-metric-desc">Zero platform downtime through 11.11 shopping surge.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="project-metric-card">
+                    <div class="project-metric-number">&lt;250ms</div>
+                    <div class="project-metric-label">API Latency</div>
+                    <p class="project-metric-desc">Sub-second cart checkouts under 45k concurrent users.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="project-metric-card">
+                    <div class="project-metric-number">3.8x</div>
+                    <div class="project-metric-label">Scale Factor</div>
+                    <p class="project-metric-desc">Horizontal container autoscale on AWS ECS Fargate.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="project-metric-card">
+                    <div class="project-metric-number">+140%</div>
+                    <div class="project-metric-label">GMV Growth</div>
+                    <p class="project-metric-desc">Measurable top-line client turnover in Year 1.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Business Challenge -->
+            <div class="mb-5">
+              <h3 class="h4 fw-bold mb-3 text-dark"><i class="fas fa-triangle-exclamation text-warning me-2"></i> The Technical Challenge</h3>
+              <p class="text-muted" style="line-height: 1.7;">
+                The client's existing commerce stack struggled under three compounding systemic bottlenecks:
+              </p>
+              <div class="row g-3 my-2">
+                <div class="col-md-6">
+                  <div class="p-4 rounded-3 h-100" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.15);">
+                    <h5 class="fw-bold text-danger mb-2" style="font-size: 1rem;"><i class="fas fa-clock-rotate-left me-2"></i> Inventory Race Conditions</h5>
+                    <p class="small text-muted mb-0">Multiple buyers simultaneously checked out the last available stock item during flash sales, resulting in embarrassing order cancellations and customer frustration.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-4 rounded-3 h-100" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.15);">
+                    <h5 class="fw-bold text-warning mb-2" style="font-size: 1rem;"><i class="fas fa-server me-2"></i> Monolithic Database Locks</h5>
+                    <p class="small text-muted mb-0">Cart queries, product catalog browsing, and heavy merchant analytics shared a single database replica, which locked tables and caused page load times to exceed 8 seconds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Engineering Solution -->
+            <div class="mb-5">
+              <h3 class="h4 fw-bold mb-3 text-dark"><i class="fas fa-microchip text-success me-2"></i> Architecture &amp; Engineering Execution</h3>
+              <p class="text-muted" style="line-height: 1.7;">
+                Classic IT's senior technical architects restructured the application into a resilient, event-driven microservices architecture:
+              </p>
+
+              <div class="d-flex flex-column gap-3 mt-3">
+                <div class="service-detail-feature">
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="service-feature-icon" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0; margin-bottom: 0;">
+                      <i class="fas fa-cubes"></i>
+                    </div>
+                    <div>
+                      <h4 class="service-feature-title mb-1" style="font-size: 1.05rem;">1. Microservices Decomposition &amp; Read/Write Segregation</h4>
+                      <p class="service-feature-desc">Separated product catalog search, customer authentication, checkout, and merchant payout ledger into independent containerized microservices. Implemented CQRS (Command Query Responsibility Segregation) with read replicas.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-detail-feature">
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="service-feature-icon" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0; margin-bottom: 0;">
+                      <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                      <h4 class="service-feature-title mb-1" style="font-size: 1.05rem;">2. Atomic Redis Distributed Stock Locking (Redlock)</h4>
+                      <p class="service-feature-desc">Engineered memory-speed stock reservation using Redis atomic lua scripts with a 10-minute cart TTL. If checkout isn't completed, stock is automatically released back to inventory without database table contention.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-detail-feature">
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="service-feature-icon" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0; margin-bottom: 0;">
+                      <i class="fas fa-route"></i>
+                    </div>
+                    <div>
+                      <h4 class="service-feature-title mb-1" style="font-size: 1.05rem;">3. Multi-Gateway Payment Router &amp; Automated Webhooks</h4>
+                      <p class="service-feature-desc">Configured dynamic smart payment routing across bKash, Nagad, Visa, Mastercard, and SSLCommerz. If one payment provider experiences gateway latency, the system automatically redirects payments with zero basket abandonment.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-detail-feature">
+                  <div class="d-flex gap-3 align-items-start">
+                    <div class="service-feature-icon" style="width: 44px; height: 44px; font-size: 1.1rem; flex-shrink: 0; margin-bottom: 0;">
+                      <i class="fas fa-calculator"></i>
+                    </div>
+                    <div>
+                      <h4 class="service-feature-title mb-1" style="font-size: 1.05rem;">4. Automated Merchant Commission &amp; Escrow Ledger</h4>
+                      <p class="service-feature-desc">Developed an immutable double-entry ledger that calculates tiered merchant commissions, tracks holding periods, handles partial refunds, and executes automated BEFTN bank payout batch files.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technology Matrix -->
+            <div class="mb-5">
+              <h3 class="h4 fw-bold mb-3 text-dark"><i class="fas fa-layer-group text-primary me-2"></i> Technology &amp; Tooling Stack</h3>
+              <p class="text-muted small mb-3">Every component was chosen for maximum horizontal scalability, security hardening, and ease of future developer onboarding:</p>
+              <div>
+                <span class="service-tech-pill"><i class="fab fa-laravel text-danger"></i> Laravel 11 Microservices</span>
+                <span class="service-tech-pill"><i class="fab fa-react text-info"></i> React 18 &amp; Next.js</span>
+                <span class="service-tech-pill"><i class="fas fa-bolt text-danger"></i> Redis Enterprise Cluster</span>
+                <span class="service-tech-pill"><i class="fab fa-aws text-warning"></i> AWS ECS Fargate &amp; ALB</span>
+                <span class="service-tech-pill"><i class="fas fa-database text-primary"></i> PostgreSQL 16 Multi-AZ</span>
+                <span class="service-tech-pill"><i class="fab fa-docker text-info"></i> Docker Containerization</span>
+                <span class="service-tech-pill"><i class="fas fa-envelope-open-text text-success"></i> RabbitMQ Message Queues</span>
+                <span class="service-tech-pill"><i class="fas fa-credit-card text-success"></i> bKash &amp; SSLCommerz APIs</span>
+                <span class="service-tech-pill"><i class="fab fa-github text-dark"></i> GitHub Actions CI/CD</span>
+                <span class="service-tech-pill"><i class="fas fa-shield-halved text-primary"></i> Cloudflare Enterprise WAF</span>
+              </div>
+            </div>
+
+            <!-- Client Testimonial Box -->
+            <div class="project-quote-box my-5">
+              <div class="d-flex align-items-center gap-2 mb-2 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="text-muted small ms-2 fw-semibold">Verified Client Review</span>
+              </div>
+              <p class="project-quote-text">
+                "Classic IT solved what seemed like an impossible concurrency roadblock. In our previous system, our database would stall out at 5,000 visitors. After their redesign, we handled over 45,000 concurrent checkout sessions during our anniversary flash sale without a single dropped packet or negative user review. Their 100% code ownership policy and dedicated SLA make them our permanent software partner."
+              </p>
+              <div class="project-quote-author">
+                <img src="images/avatar-1.jpg" alt="Rafiqul Islam" class="project-quote-avatar" />
+                <div>
+                  <div class="project-quote-name">Rafiqul Islam</div>
+                  <div class="project-quote-role">Chief Technology Officer, Global Digital Retail Ltd.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Engineering Timeline & Milestones -->
+            <div class="mb-4">
+              <h3 class="h4 fw-bold mb-4 text-dark"><i class="fas fa-timeline text-primary me-2"></i> Project Execution Milestones</h3>
+              <div class="d-flex flex-column gap-3">
+                <div class="p-3 border rounded bg-white d-flex gap-3 align-items-center">
+                  <div class="badge bg-primary px-3 py-2" style="font-size: 0.9rem;">Weeks 1 – 3</div>
+                  <div>
+                    <h5 class="mb-1 fw-bold" style="font-size: 0.95rem;">Discovery, SRS &amp; Whiteboard Database Architecture</h5>
+                    <p class="mb-0 small text-muted">Microservices domain modeling, Redis caching schemas, and complete API contract definitions.</p>
+                  </div>
+                </div>
+                <div class="p-3 border rounded bg-white d-flex gap-3 align-items-center">
+                  <div class="badge bg-primary px-3 py-2" style="font-size: 0.9rem;">Weeks 4 – 11</div>
+                  <div>
+                    <h5 class="mb-1 fw-bold" style="font-size: 0.95rem;">Core Sprint Development &amp; Bi-Weekly Staging Demos</h5>
+                    <p class="mb-0 small text-muted">Building decoupled cart, merchant portal, order management, and multi-gateway payment routing.</p>
+                  </div>
+                </div>
+                <div class="p-3 border rounded bg-white d-flex gap-3 align-items-center">
+                  <div class="badge bg-primary px-3 py-2" style="font-size: 0.9rem;">Weeks 12 – 14</div>
+                  <div>
+                    <h5 class="mb-1 fw-bold" style="font-size: 0.95rem;">Stress Testing, OWASP Security &amp; Load Emulation</h5>
+                    <p class="mb-0 small text-muted">k6 and Locust distributed load testing simulating 50,000 concurrent users to calibrate auto-scale rules.</p>
+                  </div>
+                </div>
+                <div class="p-3 border rounded bg-white d-flex gap-3 align-items-center">
+                  <div class="badge bg-success px-3 py-2" style="font-size: 0.9rem;">Weeks 15 – 16</div>
+                  <div>
+                    <h5 class="mb-1 fw-bold" style="font-size: 0.95rem;">Zero-Downtime Data Migration &amp; Cloud Handover</h5>
+                    <p class="mb-0 small text-muted">Syncing 2M+ legacy customer records, transferring private GitHub repository, and activating 24/7 SLA.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Sticky Meta Sidebar -->
+          <div class="col-lg-4">
+            <div style="position: sticky; top: 110px;">
+
+              <!-- Project Quick Meta Card -->
+              <div class="project-meta-card">
+                <h4 class="project-meta-title">
+                  <i class="fas fa-circle-info text-info"></i> Project Quick Facts
+                </h4>
+                <div class="project-meta-list">
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Client</span>
+                    <span class="project-meta-val">Global Digital Retail Ltd.</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Industry Sector</span>
+                    <span class="project-meta-val">Retail Tech &amp; E-Commerce</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Service Engagement</span>
+                    <span class="project-meta-val">Custom Software &amp; Cloud DevOps</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Project Timeline</span>
+                    <span class="project-meta-val">16 Weeks (Discovery to Launch)</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Engineering Team</span>
+                    <span class="project-meta-val">6 Dedicated Engineers</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">Deployment Infrastructure</span>
+                    <span class="project-meta-val">AWS ECS Fargate Cluster (Multi-AZ)</span>
+                  </div>
+
+                  <div class="project-meta-item">
+                    <span class="project-meta-label">IP &amp; Code Ownership</span>
+                    <span class="project-meta-val text-info"><i class="fas fa-shield-check me-1"></i> 100% Client Legal Ownership</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Download Case Study PDF Box -->
+              <div class="service-download-box mb-4">
+                <h4 class="h6 fw-bold mb-2 text-white d-flex align-items-center gap-2">
+                  <i class="fas fa-file-arrow-down text-info"></i> Technical Datasheets
+                </h4>
+                <p class="small text-white-50 mb-3">Download the full architectural diagram, database schema design, and load testing benchmark reports:</p>
+                <a href="contact.html" class="service-download-item">
+                  <span><i class="fas fa-file-pdf text-danger me-2"></i> Architecture Brief PDF</span>
+                  <i class="fas fa-download small text-info"></i>
+                </a>
+                <a href="contact.html" class="service-download-item">
+                  <span><i class="fas fa-file-contract text-warning me-2"></i> Case Study Whitepaper PDF</span>
+                  <i class="fas fa-download small text-info"></i>
+                </a>
+              </div>
+
+              <!-- Dedicated Consultation Box -->
+              <div class="contact-sidebar-card" style="height: auto;">
+                <span class="contact-sidebar-badge mb-3">
+                  <i class="fas fa-rocket me-1"></i> Need a Similar System?
+                </span>
+                <h3 class="contact-sidebar-title mb-2">Build Your High-Scale Platform</h3>
+                <p class="contact-sidebar-desc mb-4">
+                  Schedule a private 30-minute discovery session with our Lead Software Architects to review your business requirements.
+                </p>
+
+                <div class="d-flex flex-column gap-3 mb-4">
+                  <a href="tel:+8809678783783" class="d-flex align-items-center gap-3 text-decoration-none p-3 rounded" style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #fff;">
+                    <div class="contact-feature-icon" style="background: rgba(37, 99, 235, 0.25); color: #60a5fa; width: 42px; height: 42px; margin-bottom: 0;">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                      <div class="small text-white-50">Direct Hotline</div>
+                      <div class="fw-bold" style="font-size: 0.95rem;">+880 9678-783783</div>
+                    </div>
+                  </a>
+
+                  <a href="https://wa.me/8801714884848" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center gap-3 text-decoration-none p-3 rounded" style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #fff;">
+                    <div class="contact-feature-icon" style="background: rgba(16, 185, 129, 0.25); color: #34d399; width: 42px; height: 42px; margin-bottom: 0;">
+                      <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                      <div class="small text-white-50">Direct WhatsApp</div>
+                      <div class="fw-bold" style="font-size: 0.95rem;">+880 1714-884848</div>
+                    </div>
+                  </a>
+                </div>
+
+                <a href="contact.html" class="btn-primary-custom w-100 text-center justify-content-center">
+                  <i class="fas fa-calendar-check me-2"></i> Schedule Discovery Call
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. RELATED PROJECTS
+    ============================================================ -->
+    <section class="section-py bg-light-subtle" aria-label="Related case studies">
+      <div class="container">
+
+        <div class="row justify-content-between align-items-end mb-4">
+          <div class="col-lg-8">
+            <div class="section-subtitle mb-2"><i class="fas fa-folder-open me-1"></i> More Case Studies</div>
+            <h2 class="section-title mb-0">Explore Related Enterprise Work</h2>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <a href="portfolio.html" class="btn-outline-dark">
+              <span>View All Projects</span> <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- Project 2: Cloud ERP -->
+          <div class="col-lg-4 col-md-6">
+            <article class="portfolio-item h-100 d-flex flex-column">
+              <div class="portfolio-img atf-service-thumb position-relative" aria-label="Enterprise ERP Cloud Software">
+                <img src="images/portfolio-erp.jpg" alt="Enterprise ERP Cloud Software" class="portfolio-item-img" />
+                <img src="images/portfolio-erp.jpg" alt="Enterprise ERP Cloud Software" class="portfolio-item-img" />
+                <div class="portfolio-img-overlay" aria-hidden="true">
+                  <a href="project-details.html" class="portfolio-overlay-btn" aria-label="View Project Details"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="portfolio-cat">Cloud &amp; DevOps</span>
+                  <span class="portfolio-metric-badge">65% Automation</span>
+                </div>
+                <h4><a href="project-details.html" class="text-decoration-none text-dark">Enterprise Cloud ERP &amp; Financial Suite</a></h4>
+                <p class="portfolio-card-desc flex-grow-1">
+                  Multi-factory production ERP orchestrating automated supply chain, double-entry general ledger, and stock tracking.
+                </p>
+                <div class="portfolio-card-footer">
+                  <span class="small text-muted"><i class="fas fa-industry me-1"></i> Apex Manufacturing</span>
+                  <a href="project-details.html" class="portfolio-link-btn">
+                    Case Study <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 3: Retail POS -->
+          <div class="col-lg-4 col-md-6">
+            <article class="portfolio-item h-100 d-flex flex-column">
+              <div class="portfolio-img atf-service-thumb position-relative" aria-label="Retail Point of Sale POS System">
+                <img src="images/portfolio-pos.jpg" alt="Retail Point of Sale POS System" class="portfolio-item-img" />
+                <img src="images/portfolio-pos.jpg" alt="Retail Point of Sale POS System" class="portfolio-item-img" />
+                <div class="portfolio-img-overlay" aria-hidden="true">
+                  <a href="project-details.html" class="portfolio-overlay-btn" aria-label="View Project Details"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="portfolio-cat">Web &amp; ERP</span>
+                  <span class="portfolio-metric-badge">0.8s Scan Speed</span>
+                </div>
+                <h4><a href="project-details.html" class="text-decoration-none text-dark">Smart Retail POS &amp; Multi-Store Inventory</a></h4>
+                <p class="portfolio-card-desc flex-grow-1">
+                  Offline-first retail POS system designed for 40+ outlets with automated SQLite caching and central cloud balancing.
+                </p>
+                <div class="portfolio-card-footer">
+                  <span class="small text-muted"><i class="fas fa-store me-1"></i> UniMart Retail</span>
+                  <a href="project-details.html" class="portfolio-link-btn">
+                    Case Study <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 6: Courier Logistics -->
+          <div class="col-lg-4 col-md-6">
+            <article class="portfolio-item h-100 d-flex flex-column">
+              <div class="portfolio-img atf-service-thumb position-relative" aria-label="Courier Logistics &amp; Fleet Tracking">
+                <img src="images/portfolio-courier.jpg" alt="Courier Logistics &amp; Tracking" class="portfolio-item-img" />
+                <img src="images/portfolio-courier.jpg" alt="Courier Logistics &amp; Tracking" class="portfolio-item-img" />
+                <div class="portfolio-img-overlay" aria-hidden="true">
+                  <a href="project-details.html" class="portfolio-overlay-btn" aria-label="View Project Details"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="portfolio-cat">Cloud &amp; DevOps</span>
+                  <span class="portfolio-metric-badge">35k+ Shipments</span>
+                </div>
+                <h4><a href="project-details.html" class="text-decoration-none text-dark">Courier Logistics &amp; Real-Time Tracking</a></h4>
+                <p class="portfolio-card-desc flex-grow-1">
+                  Last-mile courier engine with algorithmic rider routing, automated barcode sorting, and live driver GPS map tracking.
+                </p>
+                <div class="portfolio-card-footer">
+                  <span class="small text-muted"><i class="fas fa-truck-fast me-1"></i> FastDrop Express</span>
+                  <a href="project-details.html" class="portfolio-link-btn">
+                    Case Study <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. BOTTOM STRATEGY MEETING BANNER
+    ============================================================ -->
+    <div class="container my-5">
+      <div class="process-cta-box">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <div class="text-start">
+            <h5 class="mb-1 text-white"><i class="fas fa-comments text-info me-2"></i> Have a Custom Software Project in Mind?</h5>
+            <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Schedule a free 30-minute discovery consultation with our senior technical architects.</p>
+          </div>
+          <a href="contact.html" class="btn-primary-custom">
+            <i class="fas fa-calendar-check"></i> <span>Book a Free Strategy Meeting</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       11. FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Col 1: Brand -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand">
+              <img src="images/logo.png" alt="Classic IT" class="footer-logo" />
+            </div>
+            <p class="footer-desc">
+              Classic IT is a leading software and digital solution provider empowering enterprises, retailers, and educational institutes with innovative technology solutions.
+            </p>
+            <div class="footer-socials" aria-label="Classic IT social media">
+              <a href="https://facebook.com/classicit" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="process.html">Work Process</a></li>
+              <li><a href="tech.html">Tech Stack</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="index.html#blog">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="footer-heading">Our Services</h5>
+            <div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Cloud Solutions</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Cybersecurity</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> AI &amp; ML</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Software Development</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> IT Infrastructure</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Digital Transformation</div>
+            </div>
+          </div>
+
+          <!-- Col 4: Newsletter -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Stay Updated</h5>
+            <p style="font-size:.88rem; color:rgba(255,255,255,.55); margin-bottom:16px;">
+              Subscribe to our newsletter for the latest tech insights, case studies, and company news.
+            </p>
+            <form class="footer-newsletter-form" aria-label="Newsletter signup">
+              <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+              <button type="submit" aria-label="Subscribe">Subscribe</button>
+            </form>
+            <div style="margin-top:20px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:36px; height:36px; background:rgba(37,99,235,.2); border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--clr-primary-light); font-size:.85rem;">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <span style="font-size:.8rem; color:rgba(255,255,255,.55);">ISO 27001 Certified</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:36px; height:36px; background:rgba(37,99,235,.2); border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--clr-primary-light); font-size:.85rem;">
+                  <i class="fas fa-award"></i>
+                </div>
+                <span style="font-size:.8rem; color:rgba(255,255,255,.55);">Gartner Recognized 2025</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <p class="footer-bottom-text mb-0">
+            &copy; 2026 Classic IT. All rights reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       12. SCROLL TO TOP BUTTON
+  ============================================================ -->
+  <button id="scrollTop" aria-label="Scroll back to top" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Odometer JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
