@@ -59,17 +59,9 @@
   ══════════════════════════════════════════════ */
   function initPreloader() {
     const preloader = document.getElementById('preloader');
-    if (!preloader) return;
-
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-        // Remove from DOM after transition
-        preloader.addEventListener('transitionend', () => {
-          if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-        }, { once: true });
-      }, 1900);
-    });
+    if (preloader && preloader.parentNode) {
+      preloader.parentNode.removeChild(preloader);
+    }
   }
 
   /* ══════════════════════════════════════════════
@@ -1904,7 +1896,7 @@
     if (park && park.parentNode) park.parentNode.removeChild(park);
 
     var yaw = 0, off = 0, dragYaw = 0, dragOff = 0, lookYaw = 0, lookOff = 0, vYaw = 0, vOff = 0;
-    var raf = 0, onScreen = true, down = null, dragged = false, px = -1, py = -1, pillX = 0, pillY = 0, pill;
+    var raf = 0, onScreen = false, down = null, dragged = false, px = -1, py = -1, pillX = 0, pillY = 0, pill;
     var P = parseFloat(cs.getPropertyValue('--mP')) || 550;
     var R = parseFloat(cs.getPropertyValue('--mR')) || 788;
     var degPerPx = A / (2 * P * K * Math.tan(A * Math.PI / 360));
@@ -2058,11 +2050,11 @@
 
     // Gentle auto-pan when idle
     setInterval(function() {
-      if (!down && !sec.matches(':hover') && onScreen) {
-        dragYaw += 0.05;
+      if (!down && onScreen && !sec.matches(':hover')) {
+        dragYaw += 0.06;
         tick();
       }
-    }, 40);
+    }, 50);
 
     sec.classList.add('is-interactive');
     tick();

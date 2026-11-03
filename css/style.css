@@ -1936,11 +1936,7 @@ button {
 }
 
 .atf-service-pagination {
-  position: static;
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none !important;
 }
 
 .atf-service-pagination .swiper-pagination-bullet {
@@ -4407,20 +4403,10 @@ textarea.form-control {
    PRELOADER
    ============================================================ */
 #preloader {
-  position: fixed;
-  inset: 0;
-  background: var(--clr-dark);
-  z-index: 99999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity .5s ease, visibility .5s ease;
-}
-
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .preloader-logo {
