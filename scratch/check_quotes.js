@@ -22,3 +22,4 @@ files.forEach(file => {
   });
 });
 console.log('\nQuote check completed.');
+

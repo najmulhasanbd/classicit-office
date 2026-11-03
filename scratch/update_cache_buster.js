@@ -10,7 +10,9 @@ const allFiles = [
   'services.html',
   'service-details.html',
   'portfolio.html',
-  'project-details.html'
+  'project-details.html',
+  'blog.html',
+  'blog-details.html'
 ];
 
 allFiles.forEach(file => {
@@ -19,3 +21,4 @@ allFiles.forEach(file => {
   fs.writeFileSync(file, content, 'utf8');
   console.log(`Updated cache buster in ${file}`);
 });
+

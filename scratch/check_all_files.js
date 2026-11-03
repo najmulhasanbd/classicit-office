@@ -11,7 +11,9 @@ const htmlFiles = [
   'services.html',
   'service-details.html',
   'portfolio.html',
-  'project-details.html'
+  'project-details.html',
+  'blog.html',
+  'blog-details.html'
 ];
 
 console.log('--- 1. CHECKING HTML TAG BALANCES ---');

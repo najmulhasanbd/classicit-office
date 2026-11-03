@@ -48,3 +48,4 @@ files.forEach(file => {
   console.log('Custom classes used:', allClasses.size);
   console.log('Classes not found in style.css:', missing);
 });
+

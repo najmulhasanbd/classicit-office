@@ -66,3 +66,4 @@ if (depth > 0) {
 
 console.log('Errors:', errors);
 console.log('Final depth:', depth);
+

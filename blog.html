@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Engineering Blog &amp; Technology Insights | Classic IT</title>
+  <meta name="description" content="Explore Classic IT's technical blog featuring deep dives into high-concurrency microservices, cloud DevOps, OWASP cybersecurity, offline POS architecture, and AI automation." />
+  <meta name="keywords" content="Tech blog Dhaka, software engineering articles Bangladesh, cloud architecture blog, cybersecurity insights, Classic IT blog, Laravel Redis tutorials" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Classic IT" />
+  <link rel="canonical" href="https://classicit.com.bd/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Engineering Blog &amp; Technology Insights | Classic IT" />
+  <meta property="og:description" content="Deep dives into enterprise architecture, cybersecurity, and scalable software systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://classicit.com.bd/blog.html" />
+  <meta property="og:image" content="https://classicit.com.bd/images/blog-cloud.jpg" />
+  <meta property="og:site_name" content="Classic IT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Engineering Blog &amp; Technology Insights | Classic IT" />
+  <meta name="twitter:description" content="Deep dives into enterprise architecture, cybersecurity, and scalable software systems." />
+  <meta name="twitter:image" content="https://classicit.com.bd/images/blog-cloud.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%232563eb'/><text y='.9em' font-size='70' x='12' fill='white' font-family='Arial' font-weight='900'>C</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css" />
+
+  <!-- Odometer CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=2.2" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Classic IT Engineering Blog",
+    "url": "https://classicit.com.bd/blog.html",
+    "description": "Technical insights on software engineering, cloud DevOps, cybersecurity, and enterprise architecture.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Classic IT",
+      "url": "https://classicit.com.bd",
+      "logo": "https://classicit.com.bd/images/logo.png"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div id="preloader" role="status" aria-label="Loading Classic IT">
+    <div class="preloader-logo">
+      <img src="images/logo.png" alt="Classic IT" style="max-height: 52px; width: auto;" />
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SEARCH OVERLAY
+  ============================================================ -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for technical articles, case analyses..." aria-label="Search" autocomplete="off" />
+      <button class="search-close" id="searchClose" aria-label="Close search"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       1. TOP INFO BAR
+  ============================================================ -->
+  <div id="topbar" role="banner">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between">
+
+        <!-- Left: contact items -->
+        <div class="d-flex align-items-center flex-wrap gap-1">
+          <span class="top-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+8809678783783">+880 9678-783783</a>
+          </span>
+          <span class="top-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@classicit.com.bd">info@classicit.com.bd</a>
+          </span>
+          <span class="top-contact-item d-none d-md-inline-flex">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Sector # 12, Uttara, Dhaka-1230</span>
+          </span>
+        </div>
+
+        <!-- Right: social icons -->
+        <div class="topbar-socials" aria-label="Social media links">
+          <a href="https://facebook.com/classicit" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       2. STICKY WHITE NAVBAR
+  ============================================================ -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container navbar-inner">
+
+      <!-- Logo -->
+      <a class="navbar-brand-custom" href="index.html" aria-label="Classic IT Home">
+        <img src="images/logo.png" alt="Classic IT" class="site-logo" />
+      </a>
+
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="process.html">Work Process</a></li>
+              <li><a class="dropdown-item" href="tech.html">Tech Stack</a></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html#products" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services.html">E-Commerce Software</a></li>
+              <li><a class="dropdown-item" href="services.html">ERP Software</a></li>
+              <li><a class="dropdown-item" href="services.html">POS Management</a></li>
+              <li><a class="dropdown-item" href="services.html">School Management System</a></li>
+              <li><a class="dropdown-item" href="services.html">Pharmacy Software</a></li>
+              <li><a class="dropdown-item" href="services.html">Courier Management</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- Navbar right actions -->
+        <div class="navbar-actions">
+          <button class="nav-search-btn" id="searchBtn" aria-label="Open search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="contact.html" class="btn-quote">
+            <i class="fas fa-paper-plane"></i> <span>Get A Quote</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="mainContent">
+
+    <!-- ============================================================
+         3. PAGE BANNER & BREADCRUMB
+    ============================================================ -->
+    <section class="page-banner" aria-label="Page banner">
+      <div class="container text-center">
+        <span class="page-banner-badge">Knowledge Hub &amp; Technical Articles</span>
+        <h1 class="page-banner-title">Engineering Blog &amp; Insights</h1>
+        <p class="page-banner-desc">
+          Technical deep dives, architectural best practices, and lessons learned from engineering mission-critical software, high-concurrency cloud systems, and enterprise cybersecurity.
+        </p>
+        <!-- Breadcrumb Navigation -->
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog &amp; Insights</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. BLOG ARTICLES ARCHIVE & SIDEBAR
+    ============================================================ -->
+    <section class="section-py bg-white" aria-label="Blog articles">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Left Column: Articles List -->
+          <div class="col-lg-8">
+
+            <!-- Featured Hero Article Card -->
+            <article class="blog-featured-card">
+              <div class="blog-featured-img atf-service-thumb position-relative" aria-label="Featured Article">
+                <img src="images/blog-cloud.jpg" alt="Architecting High-Concurrency Microservices" class="w-100 h-100 object-fit-cover" />
+                <img src="images/blog-cloud.jpg" alt="Architecting High-Concurrency Microservices" class="w-100 h-100 object-fit-cover" />
+                <span class="badge bg-primary position-absolute top-0 start-0 m-4 px-3 py-2 fw-bold" style="font-size: 0.82rem; z-index: 5;">
+                  <i class="fas fa-star me-1"></i> Featured Architecture
+                </span>
+              </div>
+              <div class="p-4 p-md-5">
+                <div class="d-flex align-items-center gap-3 text-muted small mb-3">
+                  <span class="text-primary fw-bold text-uppercase" style="letter-spacing: 0.06em;">Cloud &amp; DevOps</span>
+                  <span>&bull;</span>
+                  <span><i class="fas fa-calendar me-1"></i> Nov 02, 2026</span>
+                  <span>&bull;</span>
+                  <span><i class="fas fa-clock me-1"></i> 8 Min Read</span>
+                </div>
+                <h2 class="h3 fw-bold mb-3">
+                  <a href="blog-details.html" class="text-dark text-decoration-none">
+                    Architecting High-Concurrency Microservices with Redis and AWS ECS
+                  </a>
+                </h2>
+                <p class="text-muted mb-4" style="line-height: 1.75; font-size: 0.98rem;">
+                  How we refactored a monolithic commerce platform struggling at 5,000 visitors to easily withstand 45,000 concurrent checkout sessions during peak flash sales using Redis atomic locking, CQRS database read replicas, and containerized AWS ECS Fargate auto-scaling.
+                </p>
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 pt-3 border-top">
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="images/avatar-1.jpg" alt="Ashraful Islam" class="blog-author-avatar-sm" />
+                    <div>
+                      <div class="fw-bold small text-dark">Ashraful Islam</div>
+                      <div class="text-muted" style="font-size: 0.76rem;">Lead Cloud Architect</div>
+                    </div>
+                  </div>
+                  <a href="blog-details.html" class="blog-read-more">
+                    <span>Read Article</span> <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Regular Articles Grid -->
+            <div class="row g-4">
+
+              <!-- Article 1: Cybersecurity -->
+              <div class="col-md-6">
+                <article class="blog-card h-100 d-flex flex-column">
+                  <div class="blog-card-img atf-service-thumb position-relative" aria-label="Cybersecurity Article">
+                    <img src="images/blog-security.jpg" alt="OWASP Top-10 Proactive Defense" class="blog-img" />
+                    <img src="images/blog-security.jpg" alt="OWASP Top-10 Proactive Defense" class="blog-img" />
+                    <span class="blog-date-badge"><i class="fas fa-calendar-day me-1"></i> Oct 28</span>
+                  </div>
+                  <div class="blog-card-body d-flex flex-column flex-grow-1">
+                    <div class="blog-cat">Cybersecurity</div>
+                    <h4><a href="blog-details.html">Proactive Defense: Mitigating OWASP Top-10 in Modern SaaS</a></h4>
+                    <p class="flex-grow-1">
+                      Practical implementation patterns for zero-trust API authentication, strict parameterization, and automated dependency vulnerability scanning in CI/CD pipelines.
+                    </p>
+                    <div class="blog-meta justify-content-between pt-3 border-top mt-auto">
+                      <span><i class="fas fa-user-shield me-1"></i> Farhana Yasmin</span>
+                      <span><i class="fas fa-clock me-1"></i> 6 Min Read</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 2: Software Development -->
+              <div class="col-md-6">
+                <article class="blog-card h-100 d-flex flex-column">
+                  <div class="blog-card-img atf-service-thumb position-relative" aria-label="POS Software Article">
+                    <img src="images/blog-software.jpg" alt="Offline-First Retail POS" class="blog-img" />
+                    <img src="images/blog-software.jpg" alt="Offline-First Retail POS" class="blog-img" />
+                    <span class="blog-date-badge"><i class="fas fa-calendar-day me-1"></i> Oct 22</span>
+                  </div>
+                  <div class="blog-card-body d-flex flex-column flex-grow-1">
+                    <div class="blog-cat">Software Engineering</div>
+                    <h4><a href="blog-details.html">Designing Offline-First POS Terminals with SQLite and WebSockets</a></h4>
+                    <p class="flex-grow-1">
+                      How to build retail cashier stations that continue scanning barcodes without internet and reliably resolve data conflicts when reconnected to the cloud.
+                    </p>
+                    <div class="blog-meta justify-content-between pt-3 border-top mt-auto">
+                      <span><i class="fas fa-laptop-code me-1"></i> Tanvir Ahmed</span>
+                      <span><i class="fas fa-clock me-1"></i> 7 Min Read</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 3: Enterprise ERP -->
+              <div class="col-md-6">
+                <article class="blog-card h-100 d-flex flex-column">
+                  <div class="blog-card-img atf-service-thumb position-relative" aria-label="Cloud ERP Article">
+                    <img src="images/blog-cloud.jpg" alt="The Business Impact of Cloud ERP" class="blog-img" />
+                    <img src="images/blog-cloud.jpg" alt="The Business Impact of Cloud ERP" class="blog-img" />
+                    <span class="blog-date-badge"><i class="fas fa-calendar-day me-1"></i> Oct 15</span>
+                  </div>
+                  <div class="blog-card-body d-flex flex-column flex-grow-1">
+                    <div class="blog-cat">Enterprise ERP</div>
+                    <h4><a href="blog-details.html">The Real ROI of Bespoke ERP vs. Off-the-Shelf Software Suites</a></h4>
+                    <p class="flex-grow-1">
+                      A comparative analysis of licensing overheads, customization limits, and how proprietary software ownership yields higher agility for manufacturing enterprises.
+                    </p>
+                    <div class="blog-meta justify-content-between pt-3 border-top mt-auto">
+                      <span><i class="fas fa-chart-pie me-1"></i> Ashraful Islam</span>
+                      <span><i class="fas fa-clock me-1"></i> 5 Min Read</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 4: AI & Automation -->
+              <div class="col-md-6">
+                <article class="blog-card h-100 d-flex flex-column">
+                  <div class="blog-card-img atf-service-thumb position-relative" aria-label="AI Automation Article">
+                    <img src="images/blog-software.jpg" alt="AI-Driven Document Extraction" class="blog-img" />
+                    <img src="images/blog-software.jpg" alt="AI-Driven Document Extraction" class="blog-img" />
+                    <span class="blog-date-badge"><i class="fas fa-calendar-day me-1"></i> Oct 08</span>
+                  </div>
+                  <div class="blog-card-body d-flex flex-column flex-grow-1">
+                    <div class="blog-cat">AI &amp; Automation</div>
+                    <h4><a href="blog-details.html">AI OCR &amp; Automated Document Extraction in Healthcare Systems</a></h4>
+                    <p class="flex-grow-1">
+                      Integrating computer vision models into pharmacy and patient billing workflows to convert doctor prescriptions into verified inventory orders with 99.4% accuracy.
+                    </p>
+                    <div class="blog-meta justify-content-between pt-3 border-top mt-auto">
+                      <span><i class="fas fa-robot me-1"></i> Mehedi Hasan</span>
+                      <span><i class="fas fa-clock me-1"></i> 9 Min Read</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+
+            <!-- Blog Pagination -->
+            <div class="blog-pagination">
+              <a href="#" class="blog-page-btn active">1</a>
+              <a href="#" class="blog-page-btn">2</a>
+              <a href="#" class="blog-page-btn">3</a>
+              <a href="#" class="blog-page-btn" aria-label="Next Page"><i class="fas fa-chevron-right"></i></a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Sidebar Widgets -->
+          <div class="col-lg-4">
+            <div style="position: sticky; top: 110px;">
+
+              <!-- Widget 1: Search -->
+              <div class="blog-sidebar-widget">
+                <h4 class="blog-widget-title">Search Articles</h4>
+                <div class="position-relative">
+                  <input type="text" class="form-control" placeholder="Search topics, keywords..." style="padding-right: 42px; border-radius: var(--radius-sm);" />
+                  <button type="button" class="btn text-primary position-absolute end-0 top-0 h-100 px-3 border-0" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Widget 2: Topic Categories -->
+              <div class="blog-sidebar-widget">
+                <h4 class="blog-widget-title">Topic Categories</h4>
+                <div class="d-flex flex-column">
+                  <a href="#" class="blog-cat-item">
+                    <span><i class="fas fa-cloud text-primary me-2"></i> Cloud &amp; DevOps</span>
+                    <span class="blog-cat-count">14</span>
+                  </a>
+                  <a href="#" class="blog-cat-item">
+                    <span><i class="fas fa-shield-halved text-success me-2"></i> Cybersecurity &amp; OWASP</span>
+                    <span class="blog-cat-count">9</span>
+                  </a>
+                  <a href="#" class="blog-cat-item">
+                    <span><i class="fas fa-code text-info me-2"></i> Software Engineering</span>
+                    <span class="blog-cat-count">22</span>
+                  </a>
+                  <a href="#" class="blog-cat-item">
+                    <span><i class="fas fa-industry text-warning me-2"></i> Enterprise ERP &amp; POS</span>
+                    <span class="blog-cat-count">18</span>
+                  </a>
+                  <a href="#" class="blog-cat-item">
+                    <span><i class="fas fa-brain text-danger me-2"></i> AI &amp; Machine Learning</span>
+                    <span class="blog-cat-count">7</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Widget 3: Popular Articles -->
+              <div class="blog-sidebar-widget">
+                <h4 class="blog-widget-title">Trending Insights</h4>
+                <div class="blog-recent-list">
+                  <a href="blog-details.html" class="blog-recent-item">
+                    <img src="images/blog-cloud.jpg" alt="Microservices Architecture" class="blog-recent-thumb" />
+                    <div>
+                      <h5 class="blog-recent-title">High-Concurrency Microservices with Redis</h5>
+                      <span class="blog-recent-date"><i class="fas fa-calendar-alt me-1"></i> Nov 02, 2026</span>
+                    </div>
+                  </a>
+                  <a href="blog-details.html" class="blog-recent-item">
+                    <img src="images/blog-security.jpg" alt="Cybersecurity SaaS" class="blog-recent-thumb" />
+                    <div>
+                      <h5 class="blog-recent-title">Mitigating OWASP Top-10 in Modern SaaS</h5>
+                      <span class="blog-recent-date"><i class="fas fa-calendar-alt me-1"></i> Oct 28, 2026</span>
+                    </div>
+                  </a>
+                  <a href="blog-details.html" class="blog-recent-item">
+                    <img src="images/blog-software.jpg" alt="Offline POS" class="blog-recent-thumb" />
+                    <div>
+                      <h5 class="blog-recent-title">Offline-First POS with SQLite and WebSockets</h5>
+                      <span class="blog-recent-date"><i class="fas fa-calendar-alt me-1"></i> Oct 22, 2026</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Widget 4: Tags Cloud -->
+              <div class="blog-sidebar-widget">
+                <h4 class="blog-widget-title">Popular Tags</h4>
+                <div>
+                  <a href="#" class="blog-tag-pill">#Microservices</a>
+                  <a href="#" class="blog-tag-pill">#AWS</a>
+                  <a href="#" class="blog-tag-pill">#Redis</a>
+                  <a href="#" class="blog-tag-pill">#Docker</a>
+                  <a href="#" class="blog-tag-pill">#PostgreSQL</a>
+                  <a href="#" class="blog-tag-pill">#DevOps</a>
+                  <a href="#" class="blog-tag-pill">#OWASP</a>
+                  <a href="#" class="blog-tag-pill">#Laravel</a>
+                  <a href="#" class="blog-tag-pill">#React</a>
+                  <a href="#" class="blog-tag-pill">#Next.js</a>
+                  <a href="#" class="blog-tag-pill">#Security</a>
+                </div>
+              </div>
+
+              <!-- Widget 5: Direct Technical Consultation -->
+              <div class="contact-sidebar-card" style="height: auto;">
+                <span class="contact-sidebar-badge mb-3">
+                  <i class="fas fa-comments me-1"></i> Free Architecture Review
+                </span>
+                <h3 class="contact-sidebar-title mb-2">Have a System Bottleneck?</h3>
+                <p class="contact-sidebar-desc mb-4">
+                  Schedule a 1-on-1 discovery session with our Lead Solution Architects to diagnose your code or infrastructure bottlenecks.
+                </p>
+                <a href="contact.html" class="btn-primary-custom w-100 text-center justify-content-center">
+                  <i class="fas fa-calendar-check me-2"></i> Book Discovery Call
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. BOTTOM STRATEGY MEETING BANNER
+    ============================================================ -->
+    <div class="container my-5">
+      <div class="process-cta-box">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <div class="text-start">
+            <h5 class="mb-1 text-white"><i class="fas fa-comments text-info me-2"></i> Have a Custom Software Project in Mind?</h5>
+            <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Schedule a free 30-minute discovery consultation with our senior technical architects.</p>
+          </div>
+          <a href="contact.html" class="btn-primary-custom">
+            <i class="fas fa-calendar-check"></i> <span>Book a Free Strategy Meeting</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       11. FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Col 1: Brand -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand">
+              <img src="images/logo.png" alt="Classic IT" class="footer-logo" />
+            </div>
+            <p class="footer-desc">
+              Classic IT is a leading software and digital solution provider empowering enterprises, retailers, and educational institutes with innovative technology solutions.
+            </p>
+            <div class="footer-socials" aria-label="Classic IT social media">
+              <a href="https://facebook.com/classicit" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="process.html">Work Process</a></li>
+              <li><a href="tech.html">Tech Stack</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Services -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="footer-heading">Our Services</h5>
+            <div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Cloud Solutions</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Cybersecurity</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> AI &amp; ML</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Software Development</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> IT Infrastructure</div>
+              <div class="footer-service-item"><i class="fas fa-chevron-right"></i> Digital Transformation</div>
+            </div>
+          </div>
+
+          <!-- Col 4: Newsletter -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Stay Updated</h5>
+            <p style="font-size:.88rem; color:rgba(255,255,255,.55); margin-bottom:16px;">
+              Subscribe to our newsletter for the latest tech insights, case studies, and company news.
+            </p>
+            <form class="footer-newsletter-form" aria-label="Newsletter signup">
+              <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+              <button type="submit" aria-label="Subscribe">Subscribe</button>
+            </form>
+            <div style="margin-top:20px;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <div style="width:36px; height:36px; background:rgba(37,99,235,.2); border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--clr-primary-light); font-size:.85rem;">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <span style="font-size:.8rem; color:rgba(255,255,255,.55);">ISO 27001 Certified</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:36px; height:36px; background:rgba(37,99,235,.2); border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--clr-primary-light); font-size:.85rem;">
+                  <i class="fas fa-award"></i>
+                </div>
+                <span style="font-size:.8rem; color:rgba(255,255,255,.55);">Gartner Recognized 2025</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <p class="footer-bottom-text mb-0">
+            &copy; 2026 Classic IT. All rights reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       12. SCROLL TO TOP BUTTON
+  ============================================================ -->
+  <button id="scrollTop" aria-label="Scroll back to top" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Odometer JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
