@@ -162,28 +162,33 @@
       lastScroll = Math.max(0, scrollY);
     }, { passive: true });
 
-    // Active link highlighting on scroll
+    // Active link highlighting on scroll (only for in-page hash links)
     const sections = document.querySelectorAll('section[id]');
     const navLinks  = document.querySelectorAll('.navbar-nav .nav-link');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach((link) => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${id}`) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    );
+    if (sections.length > 0) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              navLinks.forEach((link) => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                  link.classList.remove('active');
+                  if (href === `#${id}`) {
+                    link.classList.add('active');
+                  }
+                }
+              });
+            }
+          });
+        },
+        { rootMargin: '-40% 0px -55% 0px' }
+      );
 
-    sections.forEach((s) => observer.observe(s));
+      sections.forEach((s) => observer.observe(s));
+    }
 
     // Auto-close mobile menu when clicking any nav link
     const navMenu = document.getElementById('navMenu');
@@ -296,6 +301,7 @@
   ══════════════════════════════════════════════ */
   function initHeroAnimations() {
     if (typeof gsap === 'undefined') return;
+    if (!document.getElementById('hero')) return;
 
     const tl = gsap.timeline({ delay: 1.8 }); // after preloader
 
@@ -1633,13 +1639,15 @@
     if (typeof Swiper === 'undefined') return;
 
     // Testimonials Carousel
-    new Swiper('.swiper-testimonials', {
-      ...CONFIG.swiper,
-      loop:             true,
-      centeredSlides:   false,
-      grabCursor:       true,
-      keyboard:         { enabled: true },
-    });
+    if (document.querySelector('.swiper-testimonials')) {
+      new Swiper('.swiper-testimonials', {
+        ...CONFIG.swiper,
+        loop:             true,
+        centeredSlides:   false,
+        grabCursor:       true,
+        keyboard:         { enabled: true },
+      });
+    }
 
     // TechCore Services Carousel
     const servicesSlider = document.querySelector('.swiper-services');
