@@ -2121,6 +2121,7 @@
   ══════════════════════════════════════════════ */
   function initProcessHovers() {
     if (typeof gsap === 'undefined') return;
+    if (!document.querySelector('.radial-process-container')) return;
 
     const arcSlices = document.querySelectorAll('.arc-slice');
     const mobilePills = document.querySelectorAll('.m-step-pill');
