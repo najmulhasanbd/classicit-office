@@ -1492,17 +1492,17 @@
     );
 
     /* ── Footer ── */
-    gsap.fromTo('#footer .footer-main .col-lg-4, #footer .footer-main .col-lg-2, #footer .footer-main .col-lg-3',
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1, y: 0, duration: 0.7, ease, stagger: 0.1,
-        scrollTrigger: {
-          trigger: '#footer',
-          start: 'top 92%',
-          toggleActions: 'play reverse play reverse',
-        },
-      }
-    );
+    gsap.from('#footer .footer-main .col-lg-4, #footer .footer-main .col-lg-2, #footer .footer-main .col-lg-3', {
+      y: 15,
+      duration: 0.6,
+      ease: 'power2.out',
+      stagger: 0.06,
+      scrollTrigger: {
+        trigger: '#footer',
+        start: 'top 99%',
+        once: true,
+      },
+    });
   }
 
   /* ══════════════════════════════════════════════

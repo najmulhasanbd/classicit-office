@@ -19,6 +19,8 @@
   --clr-topbar-bg: #f0f4fb;
   --clr-border: #e5e7eb;
   --clr-card-bg: #ffffff;
+  --clr-heading: #0d1b2e;
+  --clr-text-body: #374151;
 
   /* Hero gradient */
   --hero-grad-start: #5b9cf6;
@@ -4608,6 +4610,14 @@ textarea.form-control {
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 14px;
+}
+
+.page-banner-title span,
+.gradient-text {
+  color: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .page-banner-desc {

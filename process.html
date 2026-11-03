@@ -26,27 +26,29 @@
   <meta name="twitter:image" content="images/about-team.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png" />
-  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%232563eb'/><text y='.9em' font-size='70' x='12' fill='white' font-family='Arial' font-weight='900'>C</text></svg>" />
 
-  <!-- Google Fonts: Inter & Syne -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- FontAwesome 6 Pro/Free -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
-  <!-- Bootstrap 5.3.3 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Swiper 11 CSS -->
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Odometer CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.css" />
 
-  <!-- Custom Stylesheet -->
+  <!-- Odometer CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Structured Data: JSON-LD -->
@@ -228,13 +230,16 @@
         <p class="page-banner-desc">
           From initial discovery and whiteboard architecture to bi-weekly staging demos, zero-downtime launch, and 24/7 cloud SLA. Engineered for predictable timelines and 100% intellectual property ownership.
         </p>
-        <nav aria-label="Breadcrumb">
-          <ol class="page-breadcrumb">
-            <li><a href="index.html"><i class="fas fa-house-chimney me-1"></i> Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active" aria-current="page">Work Process</li>
-          </ol>
-        </nav>
+        <!-- Breadcrumb Navigation -->
+        <div class="page-breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+              <li class="breadcrumb-item"><a href="about.html">About</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Work Process</li>
+            </ol>
+          </nav>
+        </div>
       </div>
     </section>
 
@@ -248,11 +253,11 @@
         <div class="row justify-content-center mb-4">
           <div class="col-lg-8 text-center">
             <div class="section-subtitle justify-content-center">
-              <i class="fas fa-route text-primary me-2"></i> Client Collaboration Journey
+              <i class="fas fa-handshake-angle text-primary me-2"></i> Client Collaboration Journey
             </div>
             <h2 class="section-title" id="processTitle">From <span>Initial Meeting</span> to Live Cloud Delivery</h2>
             <p class="section-desc mx-auto">
-              Click any stage or explore the deliverables below to see how our engineering milestones eliminate delivery risk and keep you in full control.
+              A transparent, 8-stage collaboration roadmap engineered for zero risk, fixed timelines, and high-performance delivery.
             </p>
           </div>
         </div>
@@ -274,234 +279,245 @@
 
               <!-- Slice 1 -->
               <g class="arc-slice active" data-step="1" role="button" tabindex="0" aria-label="Step 1: Discovery & Scope">
-                <path d="M 30,480 A 470,470 0 0,1 66.2,300.2 L 180.8,349.5 A 345,345 0 0,0 155,480 Z" fill="url(#arcGrad1)"/>
-                <text x="105" y="398" class="arc-num" text-anchor="middle">01</text>
-                <text x="105" y="420" class="arc-icon-svg" text-anchor="middle">&#xf086;</text>
-                <text x="105" y="440" class="arc-label" text-anchor="middle">Discovery &amp; Scope</text>
+                <path class="arc-slice-path" d="M 40.00 490.00 A 460 460 0 0 1 75.02 313.97 L 241.31 382.85 A 280 280 0 0 0 220.00 490.00 Z" fill="url(#arcGrad1)"/>
+                <foreignObject class="slice-foreign" x="67" y="380" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">01</span> <i class="fas fa-comments slice-icon"></i></div>
+                    <div class="slice-label">Discovery &amp; Scope</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 2 -->
               <g class="arc-slice" data-step="2" role="button" tabindex="0" aria-label="Step 2: Architecture Blueprint">
-                <path d="M 66.2,300.2 A 470,470 0 0,1 167.9,147.9 L 255.4,237.8 A 345,345 0 0,0 180.8,349.5 Z" fill="url(#arcGrad2)"/>
-                <text x="165" y="240" class="arc-num" text-anchor="middle">02</text>
-                <text x="165" y="262" class="arc-icon-svg" text-anchor="middle">&#xf0e8;</text>
-                <text x="165" y="282" class="arc-label" text-anchor="middle">Architecture Blueprint</text>
+                <path class="arc-slice-path" d="M 75.02 313.97 A 460 460 0 0 1 174.73 164.73 L 302.01 292.01 A 280 280 0 0 0 241.31 382.85 Z" fill="url(#arcGrad2)"/>
+                <foreignObject class="slice-foreign" x="122" y="248" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">02</span> <i class="fas fa-sitemap slice-icon"></i></div>
+                    <div class="slice-label">Architecture Blueprint</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 3 -->
               <g class="arc-slice" data-step="3" role="button" tabindex="0" aria-label="Step 3: UI/UX Prototype">
-                <path d="M 167.9,147.9 A 470,470 0 0,1 320.2,46.2 L 367.5,166.1 A 345,345 0 0,0 255.4,237.8 Z" fill="url(#arcGrad3)"/>
-                <text x="275" y="132" class="arc-num" text-anchor="middle">03</text>
-                <text x="275" y="154" class="arc-icon-svg" text-anchor="middle">&#xf53b;</text>
-                <text x="275" y="174" class="arc-label" text-anchor="middle">UI/UX Prototype</text>
+                <path class="arc-slice-path" d="M 174.73 164.73 A 460 460 0 0 1 323.97 65.02 L 392.85 231.31 A 280 280 0 0 0 302.01 292.01 Z" fill="url(#arcGrad3)"/>
+                <foreignObject class="slice-foreign" x="224" y="145" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">03</span> <i class="fas fa-bezier-curve slice-icon"></i></div>
+                    <div class="slice-label">UI/UX Prototype</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 4 -->
               <g class="arc-slice" data-step="4" role="button" tabindex="0" aria-label="Step 4: Agile Staging Sprints">
-                <path d="M 320.2,46.2 A 470,470 0 0,1 500,10 L 500,135 A 345,345 0 0,0 367.5,166.1 Z" fill="url(#arcGrad4)"/>
-                <text x="415" y="80" class="arc-num" text-anchor="middle">04</text>
-                <text x="415" y="102" class="arc-icon-svg" text-anchor="middle">&#xf121;</text>
-                <text x="415" y="122" class="arc-label" text-anchor="middle">Agile Staging Sprints</text>
+                <path class="arc-slice-path" d="M 323.97 65.02 A 460 460 0 0 1 500.00 30.00 L 500.00 210.00 A 280 280 0 0 0 392.85 231.31 Z" fill="url(#arcGrad4)"/>
+                <foreignObject class="slice-foreign" x="358" y="90" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">04</span> <i class="fas fa-code slice-icon"></i></div>
+                    <div class="slice-label">Agile Staging Sprints</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 5 -->
               <g class="arc-slice" data-step="5" role="button" tabindex="0" aria-label="Step 5: Cloud & API Integration">
-                <path d="M 500,10 A 470,470 0 0,1 679.8,46.2 L 632.5,166.1 A 345,345 0 0,0 500,135 Z" fill="url(#arcGrad5)"/>
-                <text x="585" y="80" class="arc-num" text-anchor="middle">05</text>
-                <text x="585" y="102" class="arc-icon-svg" text-anchor="middle">&#xf0c2;</text>
-                <text x="585" y="122" class="arc-label" text-anchor="middle">Cloud &amp; API Integration</text>
+                <path class="arc-slice-path" d="M 500.00 30.00 A 460 460 0 0 1 676.03 65.02 L 607.15 231.31 A 280 280 0 0 0 500.00 210.00 Z" fill="url(#arcGrad5)"/>
+                <foreignObject class="slice-foreign" x="502" y="90" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">05</span> <i class="fas fa-cloud-arrow-up slice-icon"></i></div>
+                    <div class="slice-label">Cloud &amp; API Integration</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 6 -->
               <g class="arc-slice" data-step="6" role="button" tabindex="0" aria-label="Step 6: Security & QA Audit">
-                <path d="M 679.8,46.2 A 470,470 0 0,1 832.1,147.9 L 744.6,237.8 A 345,345 0 0,0 632.5,166.1 Z" fill="url(#arcGrad6)"/>
-                <text x="725" y="132" class="arc-num" text-anchor="middle">06</text>
-                <text x="725" y="154" class="arc-icon-svg" text-anchor="middle">&#xf3ed;</text>
-                <text x="725" y="174" class="arc-label" text-anchor="middle">Security &amp; QA Audit</text>
+                <path class="arc-slice-path" d="M 676.03 65.02 A 460 460 0 0 1 825.27 164.73 L 697.99 292.01 A 280 280 0 0 0 607.15 231.31 Z" fill="url(#arcGrad6)"/>
+                <foreignObject class="slice-foreign" x="635" y="145" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">06</span> <i class="fas fa-shield-halved slice-icon"></i></div>
+                    <div class="slice-label">Security &amp; QA Audit</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 7 -->
               <g class="arc-slice" data-step="7" role="button" tabindex="0" aria-label="Step 7: Live Production Launch">
-                <path d="M 832.1,147.9 A 470,470 0 0,1 933.8,300.2 L 819.2,349.5 A 345,345 0 0,0 744.6,237.8 Z" fill="url(#arcGrad7)"/>
-                <text x="835" y="240" class="arc-num" text-anchor="middle">07</text>
-                <text x="835" y="262" class="arc-icon-svg" text-anchor="middle">&#xf135;</text>
-                <text x="835" y="282" class="arc-label" text-anchor="middle">Live Cloud Launch</text>
+                <path class="arc-slice-path" d="M 825.27 164.73 A 460 460 0 0 1 924.98 313.97 L 758.69 382.85 A 280 280 0 0 0 697.99 292.01 Z" fill="url(#arcGrad7)"/>
+                <foreignObject class="slice-foreign" x="738" y="248" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">07</span> <i class="fas fa-rocket slice-icon"></i></div>
+                    <div class="slice-label">Live Production Launch</div>
+                  </div>
+                </foreignObject>
               </g>
 
               <!-- Slice 8 -->
-              <g class="arc-slice" data-step="8" role="button" tabindex="0" aria-label="Step 8: 24/7 SLA & Support">
-                <path d="M 933.8,300.2 A 470,470 0 0,1 970,480 L 845,480 A 345,345 0 0,0 819.2,349.5 Z" fill="url(#arcGrad8)"/>
-                <text x="895" y="398" class="arc-num" text-anchor="middle">08</text>
-                <text x="895" y="420" class="arc-icon-svg" text-anchor="middle">&#xf2f1;</text>
-                <text x="895" y="440" class="arc-label" text-anchor="middle">24/7 SLA &amp; Support</text>
+              <g class="arc-slice" data-step="8" role="button" tabindex="0" aria-label="Step 8: 24/7 SLA & Evolution">
+                <path class="arc-slice-path" d="M 924.98 313.97 A 460 460 0 0 1 960.00 490.00 L 780.00 490.00 A 280 280 0 0 0 758.69 382.85 Z" fill="url(#arcGrad8)"/>
+                <foreignObject class="slice-foreign" x="793" y="380" width="140" height="75">
+                  <div class="slice-content">
+                    <div class="slice-top"><span class="slice-num">08</span> <i class="fas fa-rotate slice-icon"></i></div>
+                    <div class="slice-label">24/7 SLA &amp; Support</div>
+                  </div>
+                </foreignObject>
               </g>
             </svg>
 
-            <!-- Center Hub Display Area -->
-            <div class="radial-center-hub" id="radialCenterHub">
-              <span class="radial-phase-tag" id="radialPhaseTag">
-                <span class="pulse-indicator"></span> Active Phase: 01 / 08 &bull; Discovery &amp; Scope
-              </span>
-              <h3 class="radial-main-title" id="radialTitle">Requirements Discovery &amp; Scope Agreement</h3>
-              <p class="radial-desc-text" id="radialDesc">
-                Direct consultation with our tech leads to analyze your functional requirements, technical feasibility, and lock in a transparent fixed-price agreement.
+            <!-- Center Interactive Hub Inside the Arc -->
+            <div class="radial-center-hub">
+              <div class="radial-phase-badge" id="radialPhaseTag">
+                <span class="pulse-indicator"></span> Active Phase: 01 / 08 • Discovery &amp; Scope
+              </div>
+              <h3 class="radial-center-title" id="radialTitle">
+                1-on-1 Strategy Meeting &amp; Scope Analysis
+              </h3>
+              <p class="radial-center-desc" id="radialDesc">
+                Direct consultation via Google Meet or Zoom. We align on business objectives, user requirements, and technical feasibility to formulate an actionable SRS roadmap.
               </p>
-              <div class="radial-deliverable-badge" id="radialDeliverable">
-                <i class="fas fa-file-signature text-primary me-2"></i> <strong>Deliverable:</strong> Official SRS Document &amp; Fixed-Price Agreement
+              <div class="radial-deliverable-tag" id="radialDeliverable">
+                <i class="fas fa-file-signature text-primary me-2"></i> <strong>Deliverable:</strong> System Requirement Specification (SRS) &amp; Scope Draft
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Mobile Step Indicator & Stage Card (< 768px) -->
-        <div class="d-md-none mb-4">
-          <div class="radial-mobile-nav" id="mobileStepPills">
+        <!-- Mobile-Optimized Stepper Carousel (Screens < 768px) -->
+        <div class="radial-mobile-stepper d-block d-md-none">
+          <div class="mobile-step-pills">
             <button class="m-step-pill active" data-step="1">01 Discovery</button>
-            <button class="m-step-pill" data-step="2">02 Blueprint</button>
-            <button class="m-step-pill" data-step="3">03 UI/UX</button>
+            <button class="m-step-pill" data-step="2">02 Architecture</button>
+            <button class="m-step-pill" data-step="3">03 Prototype</button>
             <button class="m-step-pill" data-step="4">04 Sprints</button>
-            <button class="m-step-pill" data-step="5">05 Cloud API</button>
+            <button class="m-step-pill" data-step="5">05 Cloud</button>
             <button class="m-step-pill" data-step="6">06 QA Audit</button>
             <button class="m-step-pill" data-step="7">07 Launch</button>
-            <button class="m-step-pill" data-step="8">08 24/7 SLA</button>
+            <button class="m-step-pill" data-step="8">08 SLA</button>
           </div>
-          <div class="radial-mobile-card mt-3" id="mobileStageCard">
-            <span class="badge bg-primary mb-2" id="mPhaseBadge">Phase 01 / 08</span>
-            <h4 class="h6 fw-bold mb-2 text-dark" id="mStageTitle">Requirements Discovery &amp; Scope Agreement</h4>
-            <p class="small text-muted mb-3" id="mStageDesc">
-              Direct consultation with our tech leads to analyze your functional requirements and lock in a transparent fixed-price agreement.
-            </p>
-            <div class="p-2 rounded bg-light border small" id="mStageDeliverable">
-              <i class="fas fa-file-signature text-primary me-2"></i> <strong>Deliverable:</strong> Official SRS Document &amp; Fixed-Price Agreement
+          <div class="mobile-stage-card mt-3" id="mobileStageCard">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge bg-primary" id="mPhaseBadge">Phase 01 / 08</span>
+              <span class="text-muted" style="font-size: 0.75rem;"><i class="fas fa-hand-pointer text-info"></i> Tap to switch</span>
             </div>
-          </div>
-        </div>
-
-        <!-- View Controls Header -->
-        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-4 pt-2 border-top">
-          <div class="d-flex align-items-center gap-2 mb-2 mb-sm-0">
-            <span class="badge bg-primary-subtle text-primary fw-semibold px-2 py-1" id="cardsPhaseBadge" style="font-size: 0.76rem;">Phase 01 Deliverables</span>
-            <span class="text-muted small fw-medium" id="cardsPhaseTitle">Discovery &amp; Scope Outcomes</span>
-          </div>
-          <!-- View Switcher Tabs -->
-          <div class="nav nav-pills radial-view-tabs" id="radialViewTabs" role="tablist">
-            <button class="nav-link active py-1 px-3" id="tabDeliverables" type="button" style="font-size: 0.78rem;">
-              <i class="fas fa-list-check me-1"></i> Phase Deliverables
-            </button>
-            <button class="nav-link py-1 px-3" id="tabAllStages" type="button" style="font-size: 0.78rem;">
-              <i class="fas fa-grid-2 me-1"></i> All 8 Stages
-            </button>
-          </div>
-        </div>
-
-        <!-- VIEW A: 4 Dynamic Deliverable Cards for the Active Phase -->
-        <div id="viewDeliverables" class="radial-pillars-grid">
-          <!-- Card 0 -->
-          <div class="radial-pillar-card card-c1" id="pCard0">
-            <div class="card-icon-wrap" id="pIconWrap0"><i class="fas fa-comments" id="pIcon0"></i></div>
-            <div class="card-body-text">
-              <span class="pillar-label" id="pTitle0">1-on-1 Consultation</span>
-              <span class="pillar-sub" id="pSub0">Zoom / Google Meet</span>
-            </div>
-          </div>
-          <!-- Card 1 -->
-          <div class="radial-pillar-card card-c2" id="pCard1">
-            <div class="card-icon-wrap" id="pIconWrap1"><i class="fas fa-chart-pie" id="pIcon1"></i></div>
-            <div class="card-body-text">
-              <span class="pillar-label" id="pTitle1">Tech Feasibility</span>
-              <span class="pillar-sub" id="pSub1">Architecture &amp; Tech Stack</span>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="radial-pillar-card card-c3" id="pCard2">
-            <div class="card-icon-wrap" id="pIconWrap2"><i class="fas fa-file-signature" id="pIcon2"></i></div>
-            <div class="card-body-text">
-              <span class="pillar-label" id="pTitle2">SRS Specification</span>
-              <span class="pillar-sub" id="pSub2">Official Scope Document</span>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="radial-pillar-card card-c4" id="pCard3">
-            <div class="card-icon-wrap" id="pIconWrap3"><i class="fas fa-timeline" id="pIcon3"></i></div>
-            <div class="card-body-text">
-              <span class="pillar-label" id="pTitle3">Roadmap &amp; Budget</span>
-              <span class="pillar-sub" id="pSub3">Fixed-Price Milestones</span>
+            <h4 class="mb-2 text-white" id="mStageTitle" style="font-size: 1.1rem; font-weight: 700;">1-on-1 Strategy Meeting &amp; Scope Analysis</h4>
+            <p class="text-white-50 mb-3" id="mStageDesc" style="font-size: 0.85rem; line-height: 1.5;">Direct consultation via Zoom or Meet. We align on business goals, requirements, and technical feasibility.</p>
+            <div class="mobile-stage-deliverable" id="mStageDeliverable">
+              <i class="fas fa-file-signature text-info me-2"></i> <strong>Deliverable:</strong> System Requirement Specification (SRS)
             </div>
           </div>
         </div>
 
-        <!-- VIEW B: All 8 Stages Overview Grid -->
-        <div id="viewAllStages" class="radial-all-stages d-none">
-          <div class="row g-2 g-md-3">
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c1 active" data-step-target="1" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-comments"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">01. Discovery</span>
-                  <span class="pillar-sub">Scope &amp; SRS</span>
+        <!-- Bottom Deliverables & All 8 Stages Container -->
+        <div class="radial-bottom-section mt-4">
+          <!-- Section Controls Header -->
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-primary px-3 py-2 rounded-pill" id="cardsPhaseBadge">Phase 01 Deliverables</span>
+              <strong class="text-white" id="cardsPhaseTitle">01. Discovery &amp; Scope Outcomes</strong>
+            </div>
+            <div class="nav nav-pills radial-view-tabs" role="tablist">
+              <button class="nav-link active py-1 px-3" id="tabDeliverables" type="button" style="font-size: 0.78rem;">
+                <i class="fas fa-layer-group me-1"></i> Phase Deliverables
+              </button>
+              <button class="nav-link py-1 px-3" id="tabAllStages" type="button" style="font-size: 0.78rem;">
+                <i class="fas fa-th-large me-1"></i> All 8 Stages
+              </button>
+            </div>
+          </div>
+
+          <!-- View 1: Dynamic 4 Deliverable Cards -->
+          <div id="viewDeliverables" class="radial-bottom-cards">
+            <div class="row g-3" id="deliverablesRow">
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c1" id="pCard0">
+                  <div class="pillar-icon" id="pIcon0"><i class="fas fa-comments"></i></div>
+                  <div class="pillar-title" id="pTitle0">1-on-1 Consultation</div>
+                  <div class="pillar-sub" id="pSub0">Zoom / Google Meet</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c2" id="pCard1">
+                  <div class="pillar-icon" id="pIcon1"><i class="fas fa-chart-pie"></i></div>
+                  <div class="pillar-title" id="pTitle1">Tech Feasibility</div>
+                  <div class="pillar-sub" id="pSub1">Architecture &amp; Tech Stack</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c3" id="pCard2">
+                  <div class="pillar-icon" id="pIcon2"><i class="fas fa-file-signature"></i></div>
+                  <div class="pillar-title" id="pTitle2">SRS Specification</div>
+                  <div class="pillar-sub" id="pSub2">Official Scope Document</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c4" id="pCard3">
+                  <div class="pillar-icon" id="pIcon3"><i class="fas fa-timeline"></i></div>
+                  <div class="pillar-title" id="pTitle3">Roadmap &amp; Budget</div>
+                  <div class="pillar-sub" id="pSub3">Fixed-Price Milestones</div>
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c2" data-step-target="2" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-sitemap"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">02. Blueprint</span>
-                  <span class="pillar-sub">Architecture &amp; SOW</span>
+          </div>
+
+          <!-- View 2: All 8 Stages Grid (01 to 08) -->
+          <div id="viewAllStages" class="radial-all-stages d-none">
+            <div class="row g-3">
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c1 active" data-step-target="1">
+                  <div class="pillar-icon"><i class="fas fa-comments"></i></div>
+                  <div class="pillar-title">01. Discovery &amp; Scope</div>
+                  <div class="pillar-sub">Fixed SRS Agreement</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c3" data-step-target="3" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fab fa-figma"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">03. UI/UX Prototype</span>
-                  <span class="pillar-sub">Interactive Figma</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c2" data-step-target="2">
+                  <div class="pillar-icon"><i class="fas fa-sitemap"></i></div>
+                  <div class="pillar-title">02. Architecture</div>
+                  <div class="pillar-sub">Cloud Blueprint &amp; SOW</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c4" data-step-target="4" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-code"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">04. Agile Sprints</span>
-                  <span class="pillar-sub">Live Staging Demos</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c3" data-step-target="3">
+                  <div class="pillar-icon"><i class="fab fa-figma"></i></div>
+                  <div class="pillar-title">03. UI/UX Prototype</div>
+                  <div class="pillar-sub">Clickable Figma Sign-off</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c5" data-step-target="5" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-cloud-arrow-up"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">05. Cloud &amp; APIs</span>
-                  <span class="pillar-sub">Microservices Setup</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c4" data-step-target="4">
+                  <div class="pillar-icon"><i class="fas fa-code-branch"></i></div>
+                  <div class="pillar-title">04. Agile Sprints</div>
+                  <div class="pillar-sub">2-Week Staging Demos</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c6" data-step-target="6" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-shield-halved"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">06. Security &amp; QA</span>
-                  <span class="pillar-sub">Zero-Defect Audit</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c1" data-step-target="5">
+                  <div class="pillar-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                  <div class="pillar-title">05. Cloud &amp; API</div>
+                  <div class="pillar-sub">Microservices Setup</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c7" data-step-target="7" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-rocket"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">07. Cloud Launch</span>
-                  <span class="pillar-sub">Full IP Handover</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c2" data-step-target="6">
+                  <div class="pillar-icon"><i class="fas fa-shield-halved"></i></div>
+                  <div class="pillar-title">06. Security &amp; QA</div>
+                  <div class="pillar-sub">ISO &amp; OWASP Clearance</div>
                 </div>
               </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="radial-pillar-card card-c8" data-step-target="8" role="button" tabindex="0">
-                <div class="card-icon-wrap"><i class="fas fa-rotate"></i></div>
-                <div class="card-body-text">
-                  <span class="pillar-label">08. 24/7 SLA</span>
-                  <span class="pillar-sub">Continuous Care</span>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c3" data-step-target="7">
+                  <div class="pillar-icon"><i class="fas fa-rocket"></i></div>
+                  <div class="pillar-title">07. Production Launch</div>
+                  <div class="pillar-sub">100% Code Handover</div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="radial-pillar-card card-c4" data-step-target="8">
+                  <div class="pillar-icon"><i class="fas fa-rotate"></i></div>
+                  <div class="pillar-title">08. 24/7 SLA Support</div>
+                  <div class="pillar-sub">99.98% Uptime SLA</div>
                 </div>
               </div>
             </div>
@@ -993,63 +1009,55 @@
         <div class="row justify-content-center">
           <div class="col-lg-10">
 
-            <div class="accordion faq-accordion" id="processAccordion">
+            <div class="faq-accordion" id="faqAccordion" role="list">
 
               <!-- FAQ Item 1 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingP1">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP1" aria-expanded="true" aria-controls="collapseP1">
-                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
-                    How do you handle scope changes or new feature requests during development?
-                  </button>
-                </h3>
-                <div id="collapseP1" class="accordion-collapse collapse show" aria-labelledby="headingP1" data-bs-parent="#processAccordion">
-                  <div class="accordion-body">
+              <div class="faq-accordion-item" role="listitem">
+                <button class="faq-accordion-btn active" aria-expanded="true" aria-controls="pfaq1">
+                  How do you handle scope changes or new feature requests during development?
+                  <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-body" id="pfaq1" aria-hidden="false">
+                  <div class="faq-body-inner">
                     We maintain an agile Change Request (CR) management framework. If you require changes outside the signed SRS, our tech leads review the request, present a clear timeline and cost delta, and only implement it upon your explicit written approval without disrupting ongoing sprints.
                   </div>
                 </div>
               </div>
 
               <!-- FAQ Item 2 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingP2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP2" aria-expanded="false" aria-controls="collapseP2">
-                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
-                    Will I have direct access to developers or only an account manager?
-                  </button>
-                </h3>
-                <div id="collapseP2" class="accordion-collapse collapse" aria-labelledby="headingP2" data-bs-parent="#processAccordion">
-                  <div class="accordion-body">
+              <div class="faq-accordion-item" role="listitem">
+                <button class="faq-accordion-btn" aria-expanded="false" aria-controls="pfaq2">
+                  Will I have direct access to developers or only an account manager?
+                  <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-body" id="pfaq2" aria-hidden="true">
+                  <div class="faq-body-inner">
                     You get direct access to your dedicated Project Manager and Lead Architect via a private Slack channel and scheduled bi-weekly Google Meet sprint calls. There is zero telephone-game communication barrier.
                   </div>
                 </div>
               </div>
 
               <!-- FAQ Item 3 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingP3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP3" aria-expanded="false" aria-controls="collapseP3">
-                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
-                    Who owns the intellectual property and code repository?
-                  </button>
-                </h3>
-                <div id="collapseP3" class="accordion-collapse collapse" aria-labelledby="headingP3" data-bs-parent="#processAccordion">
-                  <div class="accordion-body">
+              <div class="faq-accordion-item" role="listitem">
+                <button class="faq-accordion-btn" aria-expanded="false" aria-controls="pfaq3">
+                  Who owns the intellectual property and code repository?
+                  <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-body" id="pfaq3" aria-hidden="true">
+                  <div class="faq-body-inner">
                     <strong>You own 100% of all intellectual property, source code, and assets.</strong> Upon milestone completion, code is committed to your own private GitHub/GitLab account and cloud infrastructure. We sign strict Non-Disclosure Agreements (NDAs) before discovery begins.
                   </div>
                 </div>
               </div>
 
               <!-- FAQ Item 4 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingP4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP4" aria-expanded="false" aria-controls="collapseP4">
-                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
-                    What is your post-launch warranty and bug-fix policy?
-                  </button>
-                </h3>
-                <div id="collapseP4" class="accordion-collapse collapse" aria-labelledby="headingP4" data-bs-parent="#processAccordion">
-                  <div class="accordion-body">
+              <div class="faq-accordion-item" role="listitem">
+                <button class="faq-accordion-btn" aria-expanded="false" aria-controls="pfaq4">
+                  What is your post-launch warranty and bug-fix policy?
+                  <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-body" id="pfaq4" aria-hidden="true">
+                  <div class="faq-body-inner">
                     Every software project includes a complimentary 90-day post-launch warranty period during which any defects or bugs matching the SRS are resolved at zero extra cost. Afterward, we offer flexible 24/7 SLA maintenance retainers.
                   </div>
                 </div>
