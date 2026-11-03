@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>Our Work Process &amp; Methodology | Classic IT - 8-Stage Client Collaboration</title>
+  <meta name="description" content="Discover Classic IT's transparent 8-stage software development lifecycle. From initial architecture to agile staging sprints and 24/7 cloud SLA, we deliver on-time, zero-risk software solutions." />
+  <meta name="keywords" content="software engineering process, client collaboration journey, agile staging sprints, architecture blueprint, software development lifecycle, Classic IT" />
+  <meta name="author" content="Classic IT" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://classicit.com.bd/process.html" />
+  <meta property="og:title" content="Our Work Process &amp; Methodology | Classic IT" />
+  <meta property="og:description" content="Explore our proven 8-stage client collaboration roadmap: discovery, architecture, Figma prototype, agile sprints, security QA, and live cloud handover." />
+  <meta property="og:image" content="images/about-team.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Work Process &amp; Methodology | Classic IT" />
+  <meta name="twitter:description" content="A transparent 8-stage collaboration roadmap engineered for zero risk, fixed timelines, and high-performance delivery." />
+  <meta name="twitter:image" content="images/about-team.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+  <!-- Google Fonts: Inter & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro/Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Swiper 11 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Odometer CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured Data: JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Classic IT 8-Stage Client Collaboration Process",
+    "description": "The enterprise engineering and collaboration methodology used by Classic IT to develop custom software.",
+    "step": [
+      { "@type": "HowToStep", "name": "Discovery & Scope", "text": "1-on-1 discovery consultation, tech feasibility, and fixed-price SRS agreement." },
+      { "@type": "HowToStep", "name": "Architecture Blueprint", "text": "Microservices design, database schema, and milestone SOW." },
+      { "@type": "HowToStep", "name": "UI/UX Prototype", "text": "Clickable Figma prototypes and design system sign-off." },
+      { "@type": "HowToStep", "name": "Agile Staging Sprints", "text": "2-week agile sprints with bi-weekly live staging demos." },
+      { "@type": "HowToStep", "name": "Cloud & API Integration", "text": "REST/GraphQL microservices backend and cloud deployment." },
+      { "@type": "HowToStep", "name": "Security & QA Audit", "text": "Automated regression testing, load tests, and OWASP security audit." },
+      { "@type": "HowToStep", "name": "Live Cloud Launch", "text": "Zero-downtime deployment and 100% intellectual property handover." },
+      { "@type": "HowToStep", "name": "24/7 SLA & Support", "text": "24/7 monitoring, 99.98% uptime SLA guarantee, and continuous feature evolution." }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       0. ACCESSIBILITY & PRELOADER
+  ============================================================ -->
+  <a href="#mainContent" class="skip-to-content visually-hidden-focusable">Skip to main content</a>
+
+  <div id="preloader" role="status" aria-label="Loading Classic IT">
+    <div class="preloader-logo">
+      <img src="images/logo.png" alt="Classic IT" style="max-height: 52px; width: auto;" />
+    </div>
+    <div class="preloader-bar">
+      <div class="preloader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SEARCH OVERLAY
+  ============================================================ -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Search" aria-modal="true">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for services, solutions." aria-label="Search" autocomplete="off" />
+      <button class="search-close" id="searchClose" aria-label="Close search"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       1. TOPBAR
+  ============================================================ -->
+  <header class="topbar-section" id="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <a href="tel:+8809678783783" class="topbar-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>+880 9678-783783</span>
+          </a>
+          <span class="topbar-divider"></span>
+          <a href="mailto:info@classicit.com.bd" class="topbar-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@classicit.com.bd</span>
+          </a>
+          <span class="topbar-divider d-none d-lg-inline-block"></span>
+          <span class="topbar-item d-none d-lg-inline-flex">
+            <i class="fas fa-clock"></i>
+            <span>Sat - Thu: 9:00 AM - 7:00 PM</span>
+          </span>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Classic IT Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Classic IT LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Classic IT Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Classic IT YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       2. STICKY NAVBAR
+  ============================================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top main-navbar" id="mainNav" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html" aria-label="Classic IT Home">
+        <img src="images/logo.png" alt="Classic IT - Innovative Software &amp; IT Solutions" class="site-logo" />
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="about.html" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item active" href="process.html">Work Process</a></li>
+              <li><a class="dropdown-item" href="about.html#tech">Tech Stack</a></li>
+              <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="index.html#products" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#services">E-Commerce Software</a></li>
+              <li><a class="dropdown-item" href="index.html#services">ERP Software</a></li>
+              <li><a class="dropdown-item" href="index.html#services">POS Management</a></li>
+              <li><a class="dropdown-item" href="index.html#services">School Management System</a></li>
+              <li><a class="dropdown-item" href="index.html#services">Pharmacy Software</a></li>
+              <li><a class="dropdown-item" href="index.html#services">Courier Management</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#services">Service</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#blog">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- Navbar right actions -->
+        <div class="navbar-actions">
+          <button class="nav-search-btn" id="searchBtn" aria-label="Open search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="contact.html" class="btn-quote">
+            <i class="fas fa-paper-plane"></i> <span>Get A Quote</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="mainContent">
+
+    <!-- ============================================================
+         3. PAGE BANNER HERO
+    ============================================================ -->
+    <section class="page-banner text-center" aria-label="Work Process Banner">
+      <div class="container position-relative" style="z-index: 2;">
+        <span class="page-banner-badge">
+          <i class="fas fa-handshake-angle text-info me-2"></i> Engineering Transparency &amp; Velocity
+        </span>
+        <h1 class="page-banner-title">
+          Our Proven Client Collaboration <br class="d-none d-md-block" />
+          <span>&amp; Work Process</span>
+        </h1>
+        <p class="page-banner-desc">
+          From initial discovery and whiteboard architecture to bi-weekly staging demos, zero-downtime launch, and 24/7 cloud SLA. Engineered for predictable timelines and 100% intellectual property ownership.
+        </p>
+        <nav aria-label="Breadcrumb">
+          <ol class="page-breadcrumb">
+            <li><a href="index.html"><i class="fas fa-house-chimney me-1"></i> Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active" aria-current="page">Work Process</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. INTERACTIVE 8-STAGE RADIAL ARCH JOURNEY
+    ============================================================ -->
+    <section id="process" class="section-py" aria-labelledby="processTitle">
+      <div class="container">
+
+        <!-- Top Section Header -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <div class="section-subtitle justify-content-center">
+              <i class="fas fa-route text-primary me-2"></i> Client Collaboration Journey
+            </div>
+            <h2 class="section-title" id="processTitle">From <span>Initial Meeting</span> to Live Cloud Delivery</h2>
+            <p class="section-desc mx-auto">
+              Click any stage or explore the deliverables below to see how our engineering milestones eliminate delivery risk and keep you in full control.
+            </p>
+          </div>
+        </div>
+
+        <!-- Radial Semi-Circular Arch Interactive Container (Desktop / Tablet) -->
+        <div class="radial-process-container d-none d-md-block">
+          <div class="radial-arch-stage">
+            <svg class="radial-arch-svg" viewBox="0 0 1000 500" aria-label="Process Arc Diagram">
+              <defs>
+                <linearGradient id="arcGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0284c7"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
+                <linearGradient id="arcGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#1e40af"/></linearGradient>
+                <linearGradient id="arcGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3730a3"/><stop offset="100%" stop-color="#312e81"/></linearGradient>
+                <linearGradient id="arcGrad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#581c87"/><stop offset="100%" stop-color="#3b0764"/></linearGradient>
+                <linearGradient id="arcGrad5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#86198f"/><stop offset="100%" stop-color="#701a75"/></linearGradient>
+                <linearGradient id="arcGrad6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#be185d"/><stop offset="100%" stop-color="#9d174d"/></linearGradient>
+                <linearGradient id="arcGrad7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b91c1c"/><stop offset="100%" stop-color="#991b1b"/></linearGradient>
+                <linearGradient id="arcGrad8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c2410c"/><stop offset="100%" stop-color="#9a3412"/></linearGradient>
+              </defs>
+
+              <!-- Slice 1 -->
+              <g class="arc-slice active" data-step="1" role="button" tabindex="0" aria-label="Step 1: Discovery & Scope">
+                <path d="M 30,480 A 470,470 0 0,1 66.2,300.2 L 180.8,349.5 A 345,345 0 0,0 155,480 Z" fill="url(#arcGrad1)"/>
+                <text x="105" y="398" class="arc-num" text-anchor="middle">01</text>
+                <text x="105" y="420" class="arc-icon-svg" text-anchor="middle">&#xf086;</text>
+                <text x="105" y="440" class="arc-label" text-anchor="middle">Discovery &amp; Scope</text>
+              </g>
+
+              <!-- Slice 2 -->
+              <g class="arc-slice" data-step="2" role="button" tabindex="0" aria-label="Step 2: Architecture Blueprint">
+                <path d="M 66.2,300.2 A 470,470 0 0,1 167.9,147.9 L 255.4,237.8 A 345,345 0 0,0 180.8,349.5 Z" fill="url(#arcGrad2)"/>
+                <text x="165" y="240" class="arc-num" text-anchor="middle">02</text>
+                <text x="165" y="262" class="arc-icon-svg" text-anchor="middle">&#xf0e8;</text>
+                <text x="165" y="282" class="arc-label" text-anchor="middle">Architecture Blueprint</text>
+              </g>
+
+              <!-- Slice 3 -->
+              <g class="arc-slice" data-step="3" role="button" tabindex="0" aria-label="Step 3: UI/UX Prototype">
+                <path d="M 167.9,147.9 A 470,470 0 0,1 320.2,46.2 L 367.5,166.1 A 345,345 0 0,0 255.4,237.8 Z" fill="url(#arcGrad3)"/>
+                <text x="275" y="132" class="arc-num" text-anchor="middle">03</text>
+                <text x="275" y="154" class="arc-icon-svg" text-anchor="middle">&#xf53b;</text>
+                <text x="275" y="174" class="arc-label" text-anchor="middle">UI/UX Prototype</text>
+              </g>
+
+              <!-- Slice 4 -->
+              <g class="arc-slice" data-step="4" role="button" tabindex="0" aria-label="Step 4: Agile Staging Sprints">
+                <path d="M 320.2,46.2 A 470,470 0 0,1 500,10 L 500,135 A 345,345 0 0,0 367.5,166.1 Z" fill="url(#arcGrad4)"/>
+                <text x="415" y="80" class="arc-num" text-anchor="middle">04</text>
+                <text x="415" y="102" class="arc-icon-svg" text-anchor="middle">&#xf121;</text>
+                <text x="415" y="122" class="arc-label" text-anchor="middle">Agile Staging Sprints</text>
+              </g>
+
+              <!-- Slice 5 -->
+              <g class="arc-slice" data-step="5" role="button" tabindex="0" aria-label="Step 5: Cloud & API Integration">
+                <path d="M 500,10 A 470,470 0 0,1 679.8,46.2 L 632.5,166.1 A 345,345 0 0,0 500,135 Z" fill="url(#arcGrad5)"/>
+                <text x="585" y="80" class="arc-num" text-anchor="middle">05</text>
+                <text x="585" y="102" class="arc-icon-svg" text-anchor="middle">&#xf0c2;</text>
+                <text x="585" y="122" class="arc-label" text-anchor="middle">Cloud &amp; API Integration</text>
+              </g>
+
+              <!-- Slice 6 -->
+              <g class="arc-slice" data-step="6" role="button" tabindex="0" aria-label="Step 6: Security & QA Audit">
+                <path d="M 679.8,46.2 A 470,470 0 0,1 832.1,147.9 L 744.6,237.8 A 345,345 0 0,0 632.5,166.1 Z" fill="url(#arcGrad6)"/>
+                <text x="725" y="132" class="arc-num" text-anchor="middle">06</text>
+                <text x="725" y="154" class="arc-icon-svg" text-anchor="middle">&#xf3ed;</text>
+                <text x="725" y="174" class="arc-label" text-anchor="middle">Security &amp; QA Audit</text>
+              </g>
+
+              <!-- Slice 7 -->
+              <g class="arc-slice" data-step="7" role="button" tabindex="0" aria-label="Step 7: Live Production Launch">
+                <path d="M 832.1,147.9 A 470,470 0 0,1 933.8,300.2 L 819.2,349.5 A 345,345 0 0,0 744.6,237.8 Z" fill="url(#arcGrad7)"/>
+                <text x="835" y="240" class="arc-num" text-anchor="middle">07</text>
+                <text x="835" y="262" class="arc-icon-svg" text-anchor="middle">&#xf135;</text>
+                <text x="835" y="282" class="arc-label" text-anchor="middle">Live Cloud Launch</text>
+              </g>
+
+              <!-- Slice 8 -->
+              <g class="arc-slice" data-step="8" role="button" tabindex="0" aria-label="Step 8: 24/7 SLA & Support">
+                <path d="M 933.8,300.2 A 470,470 0 0,1 970,480 L 845,480 A 345,345 0 0,0 819.2,349.5 Z" fill="url(#arcGrad8)"/>
+                <text x="895" y="398" class="arc-num" text-anchor="middle">08</text>
+                <text x="895" y="420" class="arc-icon-svg" text-anchor="middle">&#xf2f1;</text>
+                <text x="895" y="440" class="arc-label" text-anchor="middle">24/7 SLA &amp; Support</text>
+              </g>
+            </svg>
+
+            <!-- Center Hub Display Area -->
+            <div class="radial-center-hub" id="radialCenterHub">
+              <span class="radial-phase-tag" id="radialPhaseTag">
+                <span class="pulse-indicator"></span> Active Phase: 01 / 08 &bull; Discovery &amp; Scope
+              </span>
+              <h3 class="radial-main-title" id="radialTitle">Requirements Discovery &amp; Scope Agreement</h3>
+              <p class="radial-desc-text" id="radialDesc">
+                Direct consultation with our tech leads to analyze your functional requirements, technical feasibility, and lock in a transparent fixed-price agreement.
+              </p>
+              <div class="radial-deliverable-badge" id="radialDeliverable">
+                <i class="fas fa-file-signature text-primary me-2"></i> <strong>Deliverable:</strong> Official SRS Document &amp; Fixed-Price Agreement
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Step Indicator & Stage Card (< 768px) -->
+        <div class="d-md-none mb-4">
+          <div class="radial-mobile-nav" id="mobileStepPills">
+            <button class="m-step-pill active" data-step="1">01 Discovery</button>
+            <button class="m-step-pill" data-step="2">02 Blueprint</button>
+            <button class="m-step-pill" data-step="3">03 UI/UX</button>
+            <button class="m-step-pill" data-step="4">04 Sprints</button>
+            <button class="m-step-pill" data-step="5">05 Cloud API</button>
+            <button class="m-step-pill" data-step="6">06 QA Audit</button>
+            <button class="m-step-pill" data-step="7">07 Launch</button>
+            <button class="m-step-pill" data-step="8">08 24/7 SLA</button>
+          </div>
+          <div class="radial-mobile-card mt-3" id="mobileStageCard">
+            <span class="badge bg-primary mb-2" id="mPhaseBadge">Phase 01 / 08</span>
+            <h4 class="h6 fw-bold mb-2 text-dark" id="mStageTitle">Requirements Discovery &amp; Scope Agreement</h4>
+            <p class="small text-muted mb-3" id="mStageDesc">
+              Direct consultation with our tech leads to analyze your functional requirements and lock in a transparent fixed-price agreement.
+            </p>
+            <div class="p-2 rounded bg-light border small" id="mStageDeliverable">
+              <i class="fas fa-file-signature text-primary me-2"></i> <strong>Deliverable:</strong> Official SRS Document &amp; Fixed-Price Agreement
+            </div>
+          </div>
+        </div>
+
+        <!-- View Controls Header -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 mt-4 pt-2 border-top">
+          <div class="d-flex align-items-center gap-2 mb-2 mb-sm-0">
+            <span class="badge bg-primary-subtle text-primary fw-semibold px-2 py-1" id="cardsPhaseBadge" style="font-size: 0.76rem;">Phase 01 Deliverables</span>
+            <span class="text-muted small fw-medium" id="cardsPhaseTitle">Discovery &amp; Scope Outcomes</span>
+          </div>
+          <!-- View Switcher Tabs -->
+          <div class="nav nav-pills radial-view-tabs" id="radialViewTabs" role="tablist">
+            <button class="nav-link active py-1 px-3" id="tabDeliverables" type="button" style="font-size: 0.78rem;">
+              <i class="fas fa-list-check me-1"></i> Phase Deliverables
+            </button>
+            <button class="nav-link py-1 px-3" id="tabAllStages" type="button" style="font-size: 0.78rem;">
+              <i class="fas fa-grid-2 me-1"></i> All 8 Stages
+            </button>
+          </div>
+        </div>
+
+        <!-- VIEW A: 4 Dynamic Deliverable Cards for the Active Phase -->
+        <div id="viewDeliverables" class="radial-pillars-grid">
+          <!-- Card 0 -->
+          <div class="radial-pillar-card card-c1" id="pCard0">
+            <div class="card-icon-wrap" id="pIconWrap0"><i class="fas fa-comments" id="pIcon0"></i></div>
+            <div class="card-body-text">
+              <span class="pillar-label" id="pTitle0">1-on-1 Consultation</span>
+              <span class="pillar-sub" id="pSub0">Zoom / Google Meet</span>
+            </div>
+          </div>
+          <!-- Card 1 -->
+          <div class="radial-pillar-card card-c2" id="pCard1">
+            <div class="card-icon-wrap" id="pIconWrap1"><i class="fas fa-chart-pie" id="pIcon1"></i></div>
+            <div class="card-body-text">
+              <span class="pillar-label" id="pTitle1">Tech Feasibility</span>
+              <span class="pillar-sub" id="pSub1">Architecture &amp; Tech Stack</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="radial-pillar-card card-c3" id="pCard2">
+            <div class="card-icon-wrap" id="pIconWrap2"><i class="fas fa-file-signature" id="pIcon2"></i></div>
+            <div class="card-body-text">
+              <span class="pillar-label" id="pTitle2">SRS Specification</span>
+              <span class="pillar-sub" id="pSub2">Official Scope Document</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="radial-pillar-card card-c4" id="pCard3">
+            <div class="card-icon-wrap" id="pIconWrap3"><i class="fas fa-timeline" id="pIcon3"></i></div>
+            <div class="card-body-text">
+              <span class="pillar-label" id="pTitle3">Roadmap &amp; Budget</span>
+              <span class="pillar-sub" id="pSub3">Fixed-Price Milestones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIEW B: All 8 Stages Overview Grid -->
+        <div id="viewAllStages" class="radial-all-stages d-none">
+          <div class="row g-2 g-md-3">
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c1 active" data-step-target="1" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-comments"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">01. Discovery</span>
+                  <span class="pillar-sub">Scope &amp; SRS</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c2" data-step-target="2" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-sitemap"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">02. Blueprint</span>
+                  <span class="pillar-sub">Architecture &amp; SOW</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c3" data-step-target="3" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fab fa-figma"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">03. UI/UX Prototype</span>
+                  <span class="pillar-sub">Interactive Figma</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c4" data-step-target="4" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-code"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">04. Agile Sprints</span>
+                  <span class="pillar-sub">Live Staging Demos</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c5" data-step-target="5" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-cloud-arrow-up"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">05. Cloud &amp; APIs</span>
+                  <span class="pillar-sub">Microservices Setup</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c6" data-step-target="6" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">06. Security &amp; QA</span>
+                  <span class="pillar-sub">Zero-Defect Audit</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c7" data-step-target="7" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-rocket"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">07. Cloud Launch</span>
+                  <span class="pillar-sub">Full IP Handover</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="radial-pillar-card card-c8" data-step-target="8" role="button" tabindex="0">
+                <div class="card-icon-wrap"><i class="fas fa-rotate"></i></div>
+                <div class="card-body-text">
+                  <span class="pillar-label">08. 24/7 SLA</span>
+                  <span class="pillar-sub">Continuous Care</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. DEEP-DIVE: THE 8 ENGINEERING PHASES IN-DEPTH
+    ============================================================ -->
+    <section class="section-py bg-white" aria-labelledby="deepDiveTitle">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-subtitle justify-content-center">
+              <i class="fas fa-layer-group text-primary me-2"></i> Comprehensive Breakdown
+            </div>
+            <h2 class="section-title" id="deepDiveTitle">Inside Every Phase of <span>Our Engineering Lifecycle</span></h2>
+            <p class="section-desc mx-auto">
+              We leave nothing to guesswork. Here is the exact checklist, deliverables, and communication rhythm you can expect during each milestone.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Phase 01 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c1">
+                  <i class="fas fa-comments"></i> Phase 01: Discovery &amp; Scope
+                </span>
+                <span class="process-detail-num">01</span>
+              </div>
+              <h3 class="process-detail-title">Requirements Analysis &amp; Fixed-Price Agreement</h3>
+              <p class="process-detail-desc">
+                We meet with your team to unpack your business logic, user personas, operational constraints, and technical goals. Every requirement is documented in plain English and verified before starting.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Technical feasibility assessment &amp; architecture recommendations</li>
+                <li><i class="fas fa-check-circle"></i> System Requirement Specification (SRS) document sign-off</li>
+                <li><i class="fas fa-check-circle"></i> Transparent milestone breakdown with guaranteed fixed-price cap</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-file-contract text-primary"></i>
+                <span>Official SRS Specification &amp; Milestone Timeline Contract</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-video"></i> Google Meet / Zoom</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-file-pdf"></i> Signed SRS</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-slack"></i> Private Slack Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c2">
+                  <i class="fas fa-sitemap"></i> Phase 02: Architecture Blueprint
+                </span>
+                <span class="process-detail-num">02</span>
+              </div>
+              <h3 class="process-detail-title">High-Level Cloud &amp; Database Architecture</h3>
+              <p class="process-detail-desc">
+                Senior architects design relational/NoSQL database schemas, microservice modularity, API gateways, third-party integrations, and disaster recovery strategies built to scale effortlessly.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Relational PostgreSQL / Redis cluster schemas &amp; indexing design</li>
+                <li><i class="fas fa-check-circle"></i> AWS / Google Cloud native topology &amp; Docker container spec</li>
+                <li><i class="fas fa-check-circle"></i> Formal Scope of Work (SOW) with 2-week sprint boundaries</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-cloud-nodes text-primary"></i>
+                <span>Cloud Topology Blueprint, DB Schema Diagrams &amp; SOW</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-diagram-project"></i> Draw.io Diagrams</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-confluence"></i> Architecture Spec</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c3">
+                  <i class="fab fa-figma"></i> Phase 03: UI/UX Prototype
+                </span>
+                <span class="process-detail-num">03</span>
+              </div>
+              <h3 class="process-detail-title">Clickable Figma Prototypes &amp; Design System</h3>
+              <p class="process-detail-desc">
+                We craft interactive Figma prototypes so you can click through every user journey on desktop and mobile before a single line of backend code is committed. Zero guesswork on user experience.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Wireframes, user journeys &amp; responsive layouts for all devices</li>
+                <li><i class="fas fa-check-circle"></i> Complete UI Design System (typography, colors, tokens, component library)</li>
+                <li><i class="fas fa-check-circle"></i> Interactive walkthrough call and client sign-off before coding</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fab fa-figma text-primary"></i>
+                <span>Clickable Figma Prototype &amp; Design Tokens UI Kit</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-figma"></i> Live Figma Prototype</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-video"></i> Prototype Walkthrough</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c4">
+                  <i class="fas fa-code"></i> Phase 04: Agile Staging Sprints
+                </span>
+                <span class="process-detail-num">04</span>
+              </div>
+              <h3 class="process-detail-title">Bi-Weekly Sprints &amp; Live Working Software Demos</h3>
+              <p class="process-detail-desc">
+                Development proceeds in rapid 2-week agile sprints. You receive private access to a secure live staging URL where you can test newly developed features every 14 days and give direct feedback.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Continuous integration &amp; automated staging deployment</li>
+                <li><i class="fas fa-check-circle"></i> Bi-weekly sprint review calls &amp; working milestone walkthroughs</li>
+                <li><i class="fas fa-check-circle"></i> Dedicated Slack channel with your core engineering team</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-globe text-primary"></i>
+                <span>Private Live Staging URL &amp; Verified Sprint Releases</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-jira"></i> Jira Kanban</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-link"></i> Private Staging URL</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-slack"></i> Realtime Slack</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 05 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c5">
+                  <i class="fas fa-cloud-arrow-up"></i> Phase 05: Cloud &amp; API Integration
+                </span>
+                <span class="process-detail-num">05</span>
+              </div>
+              <h3 class="process-detail-title">Microservices, Payment Gateways &amp; Cloud Setup</h3>
+              <p class="process-detail-desc">
+                Backend engineers establish rock-solid REST &amp; GraphQL APIs, payment gateway integrations (bKash, Nagad, Stripe, SSLCommerz), OAuth2/JWT security tokens, and containerized Docker clusters.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> RESTful / GraphQL API documentation with automated Swagger &amp; Postman</li>
+                <li><i class="fas fa-check-circle"></i> Multi-gateway payment integration &amp; SMS/Email transactional pipelines</li>
+                <li><i class="fas fa-check-circle"></i> Dockerized microservices configured for high concurrency and failover</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-network-wired text-primary"></i>
+                <span>API Gateway Spec, Swagger Documentation &amp; Cloud DB Cluster</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-bolt"></i> Postman Collection</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-docker"></i> Dockerized Images</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 06 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c6">
+                  <i class="fas fa-shield-halved"></i> Phase 06: Security &amp; QA Audit
+                </span>
+                <span class="process-detail-num">06</span>
+              </div>
+              <h3 class="process-detail-title">Zero-Defect QA, Load Testing &amp; OWASP Audit</h3>
+              <p class="process-detail-desc">
+                Dedicated QA engineers perform end-to-end regression testing, cross-browser responsiveness checks, high-volume stress simulations, and rigorous OWASP Top-10 vulnerability assessments.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Automated end-to-end Cypress/Jest test suites &amp; API regression</li>
+                <li><i class="fas fa-check-circle"></i> Load &amp; stress benchmarking to ensure high-traffic stability</li>
+                <li><i class="fas fa-check-circle"></i> Penetration testing, SQL injection guards &amp; data encryption audit</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-certificate text-primary"></i>
+                <span>Formal QA Certification &amp; OWASP Security Audit Report</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-bug"></i> QA Defect Log</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-shield-virus"></i> Security Audit PDF</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 07 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c7">
+                  <i class="fas fa-rocket"></i> Phase 07: Live Cloud Launch
+                </span>
+                <span class="process-detail-num">07</span>
+              </div>
+              <h3 class="process-detail-title">Zero-Downtime Deployment &amp; 100% IP Handover</h3>
+              <p class="process-detail-desc">
+                We manage production cutover using blue-green deployment strategies to ensure zero user downtime. We transfer all Git repositories, cloud root credentials, and documentation directly to your organization.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> Zero-downtime production deployment with CDN &amp; SSL hardening</li>
+                <li><i class="fas fa-check-circle"></i> Full source code repository handover with clear README &amp; documentation</li>
+                <li><i class="fas fa-check-circle"></i> Administrator team training &amp; management dashboard walkthrough</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-key text-primary"></i>
+                <span>Live Production Platform, 100% Codebase &amp; Cloud Root Credentials</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fab fa-github"></i> Git Repo Handover</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-chalkboard-user"></i> Admin Training Call</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 08 -->
+          <div class="col-lg-6">
+            <div class="process-detail-card">
+              <div class="process-detail-header">
+                <span class="process-phase-badge-lg c8">
+                  <i class="fas fa-rotate"></i> Phase 08: 24/7 SLA &amp; Support
+                </span>
+                <span class="process-detail-num">08</span>
+              </div>
+              <h3 class="process-detail-title">24/7 SLA Monitoring &amp; Continuous Evolution</h3>
+              <p class="process-detail-desc">
+                Our partnership continues well after launch. We provide round-the-clock server health monitoring, automatic daily cloud backups, rapid security patching, and ongoing feature enhancement sprints.
+              </p>
+              <ul class="process-checklist">
+                <li><i class="fas fa-check-circle"></i> 99.98% uptime SLA guarantee with automated Datadog alerts</li>
+                <li><i class="fas fa-check-circle"></i> 1-hour critical emergency response hotline &amp; ticketing</li>
+                <li><i class="fas fa-check-circle"></i> Continuous security patching, dependency updates &amp; scaling advisory</li>
+              </ul>
+              <div class="process-deliverable-box">
+                <i class="fas fa-headset text-primary"></i>
+                <span>24/7 Emergency SLA Guarantee &amp; Ongoing Maintenance Retainer</span>
+              </div>
+              <div class="process-touchpoint-bar">
+                <span class="text-muted small me-1">Touchpoints:</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-phone"></i> Emergency Hotline</span>
+                <span class="process-touchpoint-chip"><i class="fas fa-heart-pulse"></i> Realtime Health Monitor</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. ENGINEERING GOVERNANCE: 4 DELIVERY GUARANTEES
+    ============================================================ -->
+    <section class="section-py" style="background: var(--clr-bg-light);" aria-labelledby="guaranteesTitle">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-subtitle justify-content-center">
+              <i class="fas fa-award text-primary me-2"></i> Quality Assurance
+            </div>
+            <h2 class="section-title" id="guaranteesTitle">Our 4 Non-Negotiable <span>Delivery Guarantees</span></h2>
+            <p class="section-desc mx-auto">
+              We eliminate the common pitfalls of software outsourcing through strict governance, complete transparency, and contract-backed guarantees.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-receipt"></i>
+              </div>
+              <h3 class="governance-title">Fixed-Price Transparency</h3>
+              <p class="governance-desc">
+                No surprise bills or creeping scope. Once the SRS is locked, our pricing is 100% fixed with milestones tied strictly to approved deliverables.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-clock-rotate-left"></i>
+              </div>
+              <h3 class="governance-title">Live Staging Every 14 Days</h3>
+              <p class="governance-desc">
+                You never wait months to see your product. We deploy working builds to your private staging link every 2-week agile sprint.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h3 class="governance-title">100% Code &amp; IP Ownership</h3>
+              <p class="governance-desc">
+                You retain complete, unencumbered ownership of all intellectual property, source code, design systems, and cloud infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="governance-card">
+              <div class="governance-icon">
+                <i class="fas fa-shield-heart"></i>
+              </div>
+              <h3 class="governance-title">99.98% SLA &amp; Support</h3>
+              <p class="governance-desc">
+                Contractual SLA uptime guarantees backed by 24/7 technical monitoring, 1-hour critical response time, and automated disaster recovery.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. COLLABORATION TOOLS WE INTEGRATE
+    ============================================================ -->
+    <section class="section-py bg-white" aria-labelledby="toolsTitle">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-subtitle justify-content-center">
+              <i class="fas fa-toolbox text-primary me-2"></i> Collaboration Stack
+            </div>
+            <h2 class="section-title" id="toolsTitle">Tools That Keep Your <span>Team in the Loop</span></h2>
+            <p class="section-desc mx-auto">
+              We seamlessly integrate with your existing workflow using industry-leading communication, prototyping, tracking, and cloud platforms.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-3 g-md-4">
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(14, 165, 233, 0.12); color: #0ea5e9;">
+                <i class="fab fa-slack"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Slack</div>
+                <div class="tool-pill-role">Daily Team Chat</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(244, 63, 94, 0.12); color: #f43f5e;">
+                <i class="fab fa-figma"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Figma</div>
+                <div class="tool-pill-role">Interactive Prototypes</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(37, 99, 235, 0.12); color: #2563eb;">
+                <i class="fab fa-jira"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Jira</div>
+                <div class="tool-pill-role">Agile Sprint Tracking</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(15, 23, 42, 0.12); color: #0f172a;">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">GitHub</div>
+                <div class="tool-pill-role">Version Control &amp; CI/CD</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">
+                <i class="fab fa-aws"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">AWS Cloud</div>
+                <div class="tool-pill-role">Scalable Infrastructure</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(37, 99, 235, 0.12); color: #0284c7;">
+                <i class="fab fa-docker"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Docker</div>
+                <div class="tool-pill-role">Containerization</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Postman</div>
+                <div class="tool-pill-role">API Testing &amp; Docs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="tool-pill-card">
+              <div class="tool-pill-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                <i class="fas fa-video"></i>
+              </div>
+              <div>
+                <div class="tool-pill-name">Google Meet</div>
+                <div class="tool-pill-role">Sprint Demo Reviews</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. WORK PROCESS FAQ
+    ============================================================ -->
+    <section id="faq" class="section-py" style="background: var(--clr-bg-light);" aria-labelledby="processFaqTitle">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-subtitle justify-content-center">
+              <i class="fas fa-circle-question text-primary me-2"></i> Client Inquiries
+            </div>
+            <h2 class="section-title" id="processFaqTitle">Frequently Asked Questions <span>About Our Process</span></h2>
+            <p class="section-desc mx-auto">
+              Everything you need to know about working with our team, sprint schedules, and milestone handovers.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="accordion faq-accordion" id="processAccordion">
+
+              <!-- FAQ Item 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingP1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP1" aria-expanded="true" aria-controls="collapseP1">
+                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
+                    How do you handle scope changes or new feature requests during development?
+                  </button>
+                </h3>
+                <div id="collapseP1" class="accordion-collapse collapse show" aria-labelledby="headingP1" data-bs-parent="#processAccordion">
+                  <div class="accordion-body">
+                    We maintain an agile Change Request (CR) management framework. If you require changes outside the signed SRS, our tech leads review the request, present a clear timeline and cost delta, and only implement it upon your explicit written approval without disrupting ongoing sprints.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingP2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP2" aria-expanded="false" aria-controls="collapseP2">
+                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
+                    Will I have direct access to developers or only an account manager?
+                  </button>
+                </h3>
+                <div id="collapseP2" class="accordion-collapse collapse" aria-labelledby="headingP2" data-bs-parent="#processAccordion">
+                  <div class="accordion-body">
+                    You get direct access to your dedicated Project Manager and Lead Architect via a private Slack channel and scheduled bi-weekly Google Meet sprint calls. There is zero telephone-game communication barrier.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingP3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP3" aria-expanded="false" aria-controls="collapseP3">
+                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
+                    Who owns the intellectual property and code repository?
+                  </button>
+                </h3>
+                <div id="collapseP3" class="accordion-collapse collapse" aria-labelledby="headingP3" data-bs-parent="#processAccordion">
+                  <div class="accordion-body">
+                    <strong>You own 100% of all intellectual property, source code, and assets.</strong> Upon milestone completion, code is committed to your own private GitHub/GitLab account and cloud infrastructure. We sign strict Non-Disclosure Agreements (NDAs) before discovery begins.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingP4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseP4" aria-expanded="false" aria-controls="collapseP4">
+                    <span class="faq-icon-wrap"><i class="fas fa-question"></i></span>
+                    What is your post-launch warranty and bug-fix policy?
+                  </button>
+                </h3>
+                <div id="collapseP4" class="accordion-collapse collapse" aria-labelledby="headingP4" data-bs-parent="#processAccordion">
+                  <div class="accordion-body">
+                    Every software project includes a complimentary 90-day post-launch warranty period during which any defects or bugs matching the SRS are resolved at zero extra cost. Afterward, we offer flexible 24/7 SLA maintenance retainers.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         9. BOTTOM STRATEGY MEETING BANNER
+    ============================================================ -->
+    <div class="container my-5">
+      <div class="process-cta-box">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <div class="text-start">
+            <h5 class="mb-1 text-white"><i class="fas fa-comments text-info me-2"></i> Ready to Discuss Your Project Architecture?</h5>
+            <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Schedule a free 30-minute discovery consultation with our senior technical architects.</p>
+          </div>
+          <a href="contact.html" class="btn-primary-custom">
+            <i class="fas fa-calendar-check"></i> <span>Book a Free Strategy Meeting</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       10. FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo" aria-label="Site footer">
+    <div class="footer-top section-py">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
+
+          <!-- Col 1: About & Info -->
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-brand mb-3">
+              <img src="images/logo.png" alt="Classic IT" class="footer-logo mb-2" />
+            </div>
+            <p class="footer-desc">
+              Classic IT is a premier software development powerhouse in Bangladesh, engineering high-concurrency cloud applications, scalable ERP solutions, and conversion-optimized digital experiences since 2011.
+            </p>
+            <div class="footer-socials mt-3">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="process.html">Work Process</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Enterprise Products -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h4 class="footer-title">Products</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#services">E-Commerce Software</a></li>
+              <li><a href="index.html#services">ERP Software</a></li>
+              <li><a href="index.html#services">POS Management</a></li>
+              <li><a href="index.html#services">School Management</a></li>
+              <li><a href="index.html#services">Pharmacy Software</a></li>
+              <li><a href="index.html#services">Courier Management</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Contact Info & Hotline -->
+          <div class="col-lg-3 col-md-6">
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>House # 12, Road # 16, Sector # 12, Uttara, Dhaka-1230, Bangladesh</span>
+              </li>
+              <li>
+                <i class="fas fa-phone-alt"></i>
+                <span>+880 9678-783783<br />+880 1714-884848</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>info@classicit.com.bd<br />support@classicit.com.bd</span>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <span>Sat - Thu: 9:00 AM - 7:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="copyright-text mb-0">
+              &copy; 2026 <strong>Classic IT</strong>. All Rights Reserved. Engineered with precision.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <ul class="footer-bottom-links mb-0">
+              <li><a href="about.html">Privacy Policy</a></li>
+              <li><a href="about.html">Terms of Service</a></li>
+              <li><a href="process.html">Engineering SLA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+    <svg class="scroll-ring" width="46" height="46" viewBox="0 0 46 46">
+      <circle class="scroll-ring-circle" stroke="var(--clr-primary)" stroke-width="3" fill="transparent" r="20" cx="23" cy="23" />
+    </svg>
+  </button>
+
+  <!-- ============================================================
+       SCRIPTS (Loaded with defer)
+  ============================================================ -->
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+
+  <!-- Lenis Smooth Scroll 1.1.18 -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+
+  <!-- GSAP 3.12.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Swiper 11 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <!-- Odometer Counter -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js" defer></script>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
+
