@@ -6416,7 +6416,246 @@ ol.breadcrumb li {
 }
 
 /* ============================================================
-   READY-TO-SELL SOFTWARE PRODUCTS & PRODUCT DETAILS
+   MODERN ABOUT / WHO WE ARE SECTION REDESIGN
+============================================================ */
+.about-modern-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+  background: #0d1b2e;
+}
+
+.about-modern-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-modern-visual:hover .about-modern-img {
+  transform: scale(1.04);
+}
+
+/* Glassmorphic Top Credential Badge */
+.about-glass-badge-top {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .about-glass-badge-top {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.about-badge-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.about-badge-text-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--clr-heading);
+  line-height: 1.2;
+}
+
+[data-theme="dark"] .about-badge-text-title {
+  color: #ffffff;
+}
+
+.about-badge-text-sub {
+  font-size: 0.72rem;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Glassmorphic Bottom Floating Stats Box */
+.about-glass-stats-bottom {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  padding: 18px 22px;
+  background: rgba(13, 27, 46, 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  color: #ffffff;
+}
+
+.about-mini-stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-mini-stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #38bdf8;
+  line-height: 1.1;
+}
+
+.about-mini-stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.about-mini-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 4-Pillar Bento Grid on Right */
+.about-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 28px 0 32px;
+}
+
+.about-bento-card {
+  padding: 20px 18px;
+  background: #ffffff;
+  border: 1px solid var(--clr-border);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.about-bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] .about-bento-card {
+  background: #111e38;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .about-bento-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-bento-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.about-bento-card.card-blue .about-bento-icon-wrapper {
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--clr-primary);
+}
+
+.about-bento-card.card-amber .about-bento-icon-wrapper {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.about-bento-card.card-green .about-bento-icon-wrapper {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.about-bento-card.card-purple .about-bento-icon-wrapper {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+}
+
+.about-bento-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--clr-heading);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .about-bento-title {
+  color: #ffffff;
+}
+
+.about-bento-desc {
+  font-size: 0.82rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Trust chip */
+.about-trust-chip {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 991.98px) {
+  .about-modern-img {
+    height: 380px;
+  }
+  .about-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-glass-stats-bottom {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+  .about-mini-stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+}
+
+/* ============================================================
+   PRODUCT CARDS & SHOWCASE
 ============================================================ */
 .product-card {
   background: var(--clr-card-bg, #ffffff);
