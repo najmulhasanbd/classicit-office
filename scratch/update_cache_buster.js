@@ -7,6 +7,8 @@ const allFiles = [
   'faq.html',
   'process.html',
   'tech.html',
+  'products.html',
+  'product-details.html',
   'services.html',
   'service-details.html',
   'portfolio.html',
@@ -16,9 +18,10 @@ const allFiles = [
 ];
 
 allFiles.forEach(file => {
+  if (!fs.existsSync(file)) return;
   let content = fs.readFileSync(file, 'utf8');
-  content = content.replace(/href="css\/style\.css(?:\?v=[^"]*)?"/g, 'href="css/style.css?v=2.2"');
+  content = content.replace(/href="css\/style\.css(?:\?v=[^"]*)?"/g, 'href="css/style.css?v=2.5"');
+  content = content.replace(/src="js\/main\.js(?:\?v=[^"]*)?"/g, 'src="js/main.js?v=2.5"');
   fs.writeFileSync(file, content, 'utf8');
   console.log(`Updated cache buster in ${file}`);
 });
-

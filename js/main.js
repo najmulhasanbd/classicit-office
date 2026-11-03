@@ -190,16 +190,79 @@
       sections.forEach((s) => observer.observe(s));
     }
 
-    // Auto-close mobile menu when clicking any nav link
+    // Mobile Left-Sliding Sidebar Drawer logic
     const navMenu = document.getElementById('navMenu');
+    const toggler = document.getElementById('navbarToggler') || document.querySelector('.navbar-toggler');
+    const closeBtn = document.getElementById('mobileDrawerClose');
+    const backdrop = document.getElementById('menuBackdrop');
+
+    const openDrawer = () => {
+      if (navMenu) {
+        navMenu.classList.add('show', 'open');
+        navMenu.scrollTop = 0;
+      }
+      if (backdrop) {
+        backdrop.classList.add('show', 'open');
+      }
+      document.body.style.overflow = 'hidden';
+      if (typeof Lenis !== 'undefined' && window.__lenis) {
+        window.__lenis.stop();
+      }
+      if (toggler) toggler.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeDrawer = () => {
+      if (navMenu) {
+        navMenu.classList.remove('show', 'open');
+      }
+      if (backdrop) {
+        backdrop.classList.remove('show', 'open');
+      }
+      document.body.style.overflow = '';
+      if (typeof Lenis !== 'undefined' && window.__lenis) {
+        window.__lenis.start();
+      }
+      if (toggler) toggler.setAttribute('aria-expanded', 'false');
+    };
+
+    if (toggler) {
+      toggler.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (navMenu && (navMenu.classList.contains('show') || navMenu.classList.contains('open'))) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeDrawer();
+      });
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener('click', () => {
+        closeDrawer();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu && (navMenu.classList.contains('show') || navMenu.classList.contains('open'))) {
+        closeDrawer();
+      }
+    });
+
     if (navMenu) {
+      // Auto-close mobile drawer when clicking any direct link (not dropdown toggle)
       const menuLinks = navMenu.querySelectorAll('a:not(.dropdown-toggle)');
       menuLinks.forEach((link) => {
         link.addEventListener('click', () => {
-          if (navMenu.classList.contains('show') && typeof bootstrap !== 'undefined') {
-            const bsCollapse = bootstrap.Collapse.getInstance(navMenu);
-            if (bsCollapse) bsCollapse.hide();
-          }
+          closeDrawer();
         });
       });
     }

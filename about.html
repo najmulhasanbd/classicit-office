@@ -51,7 +51,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=2.2" />
+  <link rel="stylesheet" href="css/style.css?v=2.5" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -139,6 +139,18 @@
   <!-- ══════════════════════════════════════════════
        2. STICKY WHITE NAVBAR
   ══════════════════════════════════════════════ -->
+    <!-- ============================================================
+       3. STICKY HEADER & NAVBAR WITH MOBILE SIDEBAR DRAWER
+  ============================================================ -->
+    <!-- ============================================================
+       3. STICKY HEADER & NAVBAR WITH LEFT-SLIDING MOBILE SIDEBAR DRAWER
+  ============================================================ -->
+    <!-- ============================================================
+       3. STICKY HEADER & NAVBAR WITH LEFT-SLIDING MOBILE SIDEBAR DRAWER
+  ============================================================ -->
+    <!-- ============================================================
+       3. STICKY HEADER & NAVBAR WITH LEFT-SLIDING MOBILE SIDEBAR DRAWER
+  ============================================================ -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg" aria-label="Main navigation">
     <div class="container navbar-inner">
 
@@ -148,60 +160,103 @@
       </a>
 
       <!-- Mobile toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" id="navbarToggler" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
 
-      <!-- Nav links -->
-      <div class="collapse navbar-collapse" id="navMenu">
+      <!-- Mobile Sidebar Backdrop Overlay -->
+      <div class="mobile-drawer-backdrop" id="menuBackdrop"></div>
+
+      <!-- Nav links & Mobile Left-Sliding Sidebar Drawer -->
+      <div class="collapse navbar-collapse" id="navMenu" data-lenis-prevent>
+
+        <!-- Mobile Drawer Header (Only visible on mobile <= 991px) -->
+        <div class="mobile-drawer-header d-lg-none">
+          <a href="index.html" aria-label="Classic IT Home">
+            <img src="images/logo.png" alt="Classic IT" style="max-height: 36px; width: auto;" />
+          </a>
+          <button type="button" class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <!-- Main Navigation Links -->
         <ul class="navbar-nav mx-auto">
 
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link " href="index.html">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-house"></i></span>
+              <span class="nav-link-text">Home</span>
+            </a>
           </li>
 
+          <!-- About Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="about.html" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <a class="nav-link dropdown-toggle active" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-building"></i></span>
+              <span class="nav-link-text">About</span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="about.html">About Us</a></li>
-              <li><a class="dropdown-item" href="process.html">Work Process</a></li>
-              <li><a class="dropdown-item" href="tech.html">Tech Stack</a></li>
-              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item active" href="about.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> About Us</a></li>
+              <li><a class="dropdown-item " href="process.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Work Process</a></li>
+              <li><a class="dropdown-item " href="tech.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Tech Stack</a></li>
+              <li><a class="dropdown-item " href="faq.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> FAQ</a></li>
             </ul>
           </li>
 
+          <!-- Ready Products Dropdown (Commercial Software for Sale) -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="index.html#products" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <a class="nav-link dropdown-toggle " href="products.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-box-open"></i></span>
+              <span class="nav-link-text">Products</span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="index.html#services">E-Commerce Software</a></li>
-              <li><a class="dropdown-item" href="index.html#services">ERP Software</a></li>
-              <li><a class="dropdown-item" href="index.html#services">POS Management</a></li>
-              <li><a class="dropdown-item" href="index.html#services">School Management System</a></li>
-              <li><a class="dropdown-item" href="index.html#services">Pharmacy Software</a></li>
-              <li><a class="dropdown-item" href="index.html#services">Courier Management</a></li>
+              <li><a class="dropdown-item " href="products.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> All Ready Products</a></li>
+              <li><a class="dropdown-item " href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Enterprise Cloud ERP</a></li>
+              <li><a class="dropdown-item" href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Smart Retail POS</a></li>
+              <li><a class="dropdown-item" href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Multi-Vendor E-Commerce</a></li>
+              <li><a class="dropdown-item" href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> School Management ERP</a></li>
+              <li><a class="dropdown-item" href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Smart Pharmacy System</a></li>
+              <li><a class="dropdown-item" href="product-details.html"><i class="fas fa-arrow-right-long me-2 text-primary"></i> Courier Logistics SaaS</a></li>
             </ul>
           </li>
 
+          <!-- Services (Single Link) -->
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link " href="services.html">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-laptop-code"></i></span>
+              <span class="nav-link-text">Services</span>
+            </a>
           </li>
 
+          <!-- Projects / Portfolio (Single Link - Delivered Client Work) -->
           <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Projects</a>
+            <a class="nav-link " href="portfolio.html">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-diagram-project"></i></span>
+              <span class="nav-link-text">Projects</span>
+            </a>
           </li>
 
+          <!-- Blog (Single Link) -->
           <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
+            <a class="nav-link " href="blog.html">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-newspaper"></i></span>
+              <span class="nav-link-text">Blog</span>
+            </a>
           </li>
 
+          <!-- Contact (Single Link) -->
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link " href="contact.html">
+              <span class="nav-icon-badge d-lg-none"><i class="fas fa-headset"></i></span>
+              <span class="nav-link-text">Contact</span>
+            </a>
           </li>
 
         </ul>
 
-        <!-- Navbar right actions -->
-        <div class="navbar-actions">
+        <!-- Navbar right actions (Desktop) -->
+        <div class="navbar-actions d-none d-lg-flex">
           <button class="nav-search-btn" id="searchBtn" aria-label="Open search">
             <i class="fas fa-search"></i>
           </button>
@@ -209,6 +264,30 @@
             <i class="fas fa-paper-plane"></i> <span>Get A Quote</span>
           </a>
         </div>
+
+        <!-- Mobile Drawer Footer (Only visible on mobile <= 991px) -->
+        <div class="mobile-drawer-footer d-lg-none">
+          <a href="contact.html" class="btn-primary-custom w-100 justify-content-center mb-3">
+            <i class="fas fa-paper-plane me-2"></i> <span>Get A Free Quote</span>
+          </a>
+          <div class="mobile-drawer-contact-card">
+            <div class="mobile-contact-item">
+              <i class="fas fa-phone-alt text-primary"></i>
+              <a href="tel:+8809678783783">+880 9678-783783</a>
+            </div>
+            <div class="mobile-contact-item">
+              <i class="fas fa-envelope text-info"></i>
+              <a href="mailto:info@classicit.com.bd">info@classicit.com.bd</a>
+            </div>
+          </div>
+          <div class="mobile-drawer-socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -1103,7 +1182,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2.5"></script>
 
 </body>
 </html>
