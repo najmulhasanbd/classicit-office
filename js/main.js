@@ -3188,6 +3188,37 @@
   }
 
   /* ══════════════════════════════════════════════
+     CLIENT VIDEO REVIEW POPUP MODAL
+  ══════════════════════════════════════════════ */
+  function initVideoReviewModal() {
+    const videoModal = document.getElementById('videoReviewModal');
+    if (!videoModal) return;
+
+    const iframe = document.getElementById('reviewVideoIframe');
+    const modalTitle = document.getElementById('videoModalLabel');
+
+    videoModal.addEventListener('show.bs.modal', function(event) {
+      const button = event.relatedTarget;
+      if (button) {
+        const videoUrl = button.getAttribute('data-video-url') || 'https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1';
+        const title = button.getAttribute('data-video-title') || 'Client Video Review & Case Study';
+        if (modalTitle) {
+          modalTitle.innerHTML = `<i class="fas fa-circle-play text-primary me-2"></i> ${title}`;
+        }
+        if (iframe) {
+          iframe.src = videoUrl;
+        }
+      }
+    });
+
+    videoModal.addEventListener('hidden.bs.modal', function() {
+      if (iframe) {
+        iframe.src = '';
+      }
+    });
+  }
+
+  /* ══════════════════════════════════════════════
      INIT — DOMCONTENTLOADED
   ══════════════════════════════════════════════ */
   function init() {
@@ -3214,6 +3245,7 @@
     initScrollTop();
     initContactForm();
     initNewsletter();
+    initVideoReviewModal();
 
     // GSAP animations suite (after GSAP & ScrollTrigger load)
     if (typeof gsap !== 'undefined') {

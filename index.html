@@ -50,7 +50,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.min.css" />
 
-  <link rel="stylesheet" href="css/style.css?v=3.7" />
+  <link rel="stylesheet" href="css/style.css?v=3.9" />
 
   <script type="application/ld+json">
   {
@@ -1719,13 +1719,21 @@
     <section id="testimonials" class="section-py" aria-labelledby="testimonialsTitle">
       <div class="container">
 
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-6 text-center testimonials-header">
-            <div class="section-subtitle justify-content-center">Client Reviews</div>
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-8 testimonials-header">
+            <div class="section-subtitle">Client Reviews</div>
             <h2 class="section-title" id="testimonialsTitle">What Our <span
                 style="color:var(--clr-primary-light)">Clients</span> Say</h2>
-            <p class="section-desc mx-auto" style="color:rgba(255,255,255,.6);">Real results, real feedback — from the
-              organizations we've helped transform.</p>
+            <p class="section-desc mb-0" style="color:rgba(255,255,255,.7);">Real results, real feedback — from the
+              organizations we've helped transform with scalable technology.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <button type="button" class="btn-video-review" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+              data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+              data-video-title="Client Video Reviews &amp; Success Stories" aria-label="Watch Video Reviews">
+              <span class="video-play-pulse"><i class="fas fa-play"></i></span>
+              <span>Watch Video Reviews</span>
+            </button>
           </div>
         </div>
 
@@ -1735,9 +1743,16 @@
             <div class="swiper-slide">
               <div class="testimonial-card">
                 <span class="testimonial-quote" aria-hidden="true">"</span>
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="testimonial-stars mb-0" aria-label="5 out of 5 stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <button type="button" class="btn-card-video" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+                    data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+                    data-video-title="James Davidson - Client Video Review" aria-label="Watch video review">
+                    <i class="fas fa-circle-play"></i> <span>Watch Video</span>
+                  </button>
                 </div>
                 <p class="testimonial-text">Classic IT's cloud migration expertise saved us 40% on infrastructure costs
                   while improving our uptime from 99.2% to 99.98%. Their team was professional, communicative, and
@@ -1758,9 +1773,16 @@
             <div class="swiper-slide">
               <div class="testimonial-card">
                 <span class="testimonial-quote" aria-hidden="true">"</span>
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="testimonial-stars mb-0" aria-label="5 out of 5 stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <button type="button" class="btn-card-video" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+                    data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+                    data-video-title="Farzana Ahmed - Client Video Review" aria-label="Watch video review">
+                    <i class="fas fa-circle-play"></i> <span>Watch Video</span>
+                  </button>
                 </div>
                 <p class="testimonial-text">The ERP and AI-powered analytics system Classic IT deployed for us has
                   transformed our retail chain. Real-time multi-branch inventory tracking has reduced waste by 38%.</p>
@@ -1780,9 +1802,16 @@
             <div class="swiper-slide">
               <div class="testimonial-card">
                 <span class="testimonial-quote" aria-hidden="true">"</span>
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="testimonial-stars mb-0" aria-label="5 out of 5 stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <button type="button" class="btn-card-video" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+                    data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+                    data-video-title="Tanvir Hasan - Client Video Review" aria-label="Watch video review">
+                    <i class="fas fa-circle-play"></i> <span>Watch Video</span>
+                  </button>
                 </div>
                 <p class="testimonial-text">Their software development team automated our entire logistics and dispatch
                   pipeline. From courier tracking to auto-invoicing, Classic IT delivered pure excellence on time.</p>
@@ -1802,9 +1831,16 @@
             <div class="swiper-slide">
               <div class="testimonial-card">
                 <span class="testimonial-quote" aria-hidden="true">"</span>
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="testimonial-stars mb-0" aria-label="5 out of 5 stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <button type="button" class="btn-card-video" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+                    data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+                    data-video-title="Amanda Lee - Client Video Review" aria-label="Watch video review">
+                    <i class="fas fa-circle-play"></i> <span>Watch Video</span>
+                  </button>
                 </div>
                 <p class="testimonial-text">Classic IT rebuilt our entire e-commerce platform in just 4 months. The new
                   site handles 10x the traffic and our conversion rate jumped by 35%. Their agile process kept us
@@ -1822,9 +1858,16 @@
             <div class="swiper-slide">
               <div class="testimonial-card">
                 <span class="testimonial-quote" aria-hidden="true">"</span>
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="testimonial-stars mb-0" aria-label="5 out of 5 stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                      class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                  <button type="button" class="btn-card-video" data-bs-toggle="modal" data-bs-target="#videoReviewModal"
+                    data-video-url="https://www.youtube.com/embed/5Peo-ivmupE?autoplay=1"
+                    data-video-title="Thomas Parker - Client Video Review" aria-label="Watch video review">
+                    <i class="fas fa-circle-play"></i> <span>Watch Video</span>
+                  </button>
                 </div>
                 <p class="testimonial-text">The DevOps transformation Classic IT led has cut our deployment time from 3
                   days to under 30 minutes. CI/CD pipelines are flawless, and their 24/7 support gives us complete peace
@@ -2404,6 +2447,28 @@
     </div>
   </footer>
 
+  <div class="modal fade video-review-modal" id="videoReviewModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" id="videoModalLabel"><i class="fas fa-circle-play text-primary me-2"></i> Client Video Review</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3 p-md-4">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg bg-dark">
+            <iframe id="reviewVideoIframe" src="" title="Client Video Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-3 pt-2 text-white-50 small">
+            <span><i class="fas fa-shield-halved text-success me-1"></i> Verified Client Case Study &bull; Classic IT</span>
+            <a href="https://www.youtube.com/@classicit642" target="_blank" rel="noopener" class="text-primary text-decoration-none fw-semibold">
+              <i class="fab fa-youtube text-danger me-1"></i> More Videos on YouTube &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button id="scrollTop" aria-label="Scroll back to top" title="Back to top">
     <i class="fas fa-chevron-up"></i>
   </button>
@@ -2419,7 +2484,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
 
-  <script src="js/main.js?v=3.7"></script>
+  <script src="js/main.js?v=3.9"></script>
 
 </body>
 
