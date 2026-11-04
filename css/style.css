@@ -7990,9 +7990,17 @@ ol.breadcrumb li {
 
 .team-card-image-wrap {
   position: relative;
-  height: 280px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   overflow: hidden;
   background: #1e293b;
+}
+
+@media (min-width: 992px) {
+  .team-card-image-wrap {
+    height: 270px;
+    aspect-ratio: auto;
+  }
 }
 
 .team-card-img {
@@ -8307,4 +8315,35 @@ ol.breadcrumb li {
 
 [data-theme="dark"] .team-connect-btn:hover {
   color: #7dd3fc;
+}
+
+/* ── Mobile 2-Column Optimization (< 768px) ────────────── */
+@media (max-width: 767.98px) {
+  .team-card {
+    border-radius: 14px;
+  }
+  .team-card-body {
+    padding: 12px 10px 14px !important;
+  }
+  .team-name {
+    font-size: 0.94rem !important;
+    margin-bottom: 2px !important;
+  }
+  .team-designation {
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
+  }
+  .team-branch-pill {
+    font-size: 0.65rem !important;
+    padding: 2px 7px !important;
+    margin-bottom: 6px !important;
+  }
+  .team-filter-bar {
+    gap: 6px !important;
+    margin-bottom: 24px !important;
+  }
+  .team-filter-btn {
+    padding: 6px 12px !important;
+    font-size: 0.76rem !important;
+  }
 }
