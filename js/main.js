@@ -261,6 +261,54 @@
   }
 
   /* ══════════════════════════════════════════════
+     4.5. DESKTOP DROPDOWN HOVER & INTENT
+  ══════════════════════════════════════════════ */
+  function initDesktopDropdownHover() {
+    const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+    if (!dropdowns.length) return;
+
+    dropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (!toggle || !menu) return;
+
+      let timer = null;
+
+      const openDropdown = () => {
+        if (window.innerWidth < 992) return;
+        clearTimeout(timer);
+        dropdown.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+        menu.classList.add('show');
+      };
+
+      const closeDropdown = () => {
+        if (window.innerWidth < 992) return;
+        timer = setTimeout(() => {
+          dropdown.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('show');
+        }, 220); // 220ms grace buffer ensures seamless diagonal mouse movement without closing!
+      };
+
+      dropdown.addEventListener('mouseenter', openDropdown);
+      dropdown.addEventListener('mouseleave', closeDropdown);
+      menu.addEventListener('mouseenter', openDropdown);
+      menu.addEventListener('mouseleave', closeDropdown);
+
+      // On desktop, clicking the dropdown-toggle navigates directly to its target page
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth >= 992) {
+          const href = toggle.getAttribute('href');
+          if (href && href !== '#' && href !== 'javascript:void(0);') {
+            window.location.href = href;
+          }
+        }
+      });
+    });
+  }
+
+  /* ══════════════════════════════════════════════
      5. SEARCH OVERLAY
   ══════════════════════════════════════════════ */
   function initSearch() {
@@ -352,41 +400,47 @@
   }
 
   /* ══════════════════════════════════════════════
-     6. HERO ANIMATIONS (GSAP staggered entrance)
+     6. HERO ANIMATIONS (GSAP fast, snappy entrance)
   ══════════════════════════════════════════════ */
   function initHeroAnimations() {
     if (typeof gsap === 'undefined') return;
     if (!document.getElementById('hero')) return;
 
-    const tl = gsap.timeline({ delay: 1.8 }); // after preloader
+    // Fast snappy start (no preloader delay)
+    const tl = gsap.timeline({ delay: 0.05 });
 
-    // Badge
+    // Badge & Hero Image start immediately in parallel
     tl.fromTo('#heroBadge',
-      { opacity: 0, y: -30, scale: 0.85 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: 'back.out(1.7)' }
+      { opacity: 0, y: -20, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'power2.out' }
     );
 
-    // Hero title — typewriter typing entrance
+    tl.fromTo('#heroImageCol',
+      { opacity: 0, x: 40, scale: 0.95 },
+      { opacity: 1, x: 0, scale: 1, duration: 0.6, ease: 'power3.out' },
+      0.05
+    );
+
+    // Hero title — fast, snappy typewriter typing entrance (10ms typing speed)
     const title = document.getElementById('heroTitle');
     if (title) {
       const { charList, cursor } = prepareTypewriter(title);
       if (charList.length) {
         if (cursor) {
-          tl.set(cursor, { opacity: 1 }, '-=0.2');
+          tl.set(cursor, { opacity: 1 }, 0.1);
           if (charList[0] && charList[0].parentNode) charList[0].before(cursor);
         }
 
         tl.to(charList, {
           opacity: 1,
           y: 0,
-          duration: 0.015,
-          stagger: 0.026, // 26ms typing cadence
+          duration: 0.01,
+          stagger: 0.01, // 10ms typing cadence for instant, crisp digital stream
           ease: 'power1.out',
           onUpdate: function () {
             if (!cursor) return;
             const progress = this.progress();
             if (progress >= 0.985) {
-              // Hide cursor just before the final frame
               cursor.style.display = 'none';
               return;
             }
@@ -396,7 +450,7 @@
             }
           },
           onComplete: function () {
-            // Typing complete - IMMEDIATELY remove cursor so nothing lingers!
+            // Typing complete - IMMEDIATELY remove cursor
             if (cursor) {
               cursor.style.display = 'none';
               cursor.remove();
@@ -406,59 +460,52 @@
               title.querySelectorAll('.type-cursor, .typed-cursor').forEach((c) => c.remove());
             }
 
-            // Glow / scale pop on highlighted span words
+            // Subtle glow pop on highlighted span
             const span = title.querySelector('span');
             if (span) {
               gsap.fromTo(span,
-                { scale: 1.05, filter: 'brightness(1.25)' },
-                { scale: 1, filter: 'brightness(1)', duration: 0.45, ease: 'back.out(2)' }
+                { scale: 1.04, filter: 'brightness(1.2)' },
+                { scale: 1, filter: 'brightness(1)', duration: 0.35, ease: 'power2.out' }
               );
             }
           },
-        }, '-=0.2');
+        }, 0.1);
       }
     }
 
-    // Description
+    // Description (overlaps title typing)
     tl.fromTo('#heroDesc',
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' },
-      '-=0.3'
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' },
+      '-=0.25'
     );
 
     // Buttons
     tl.fromTo('#heroBtns',
-      { opacity: 0, y: 25 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' },
-      '-=0.35'
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' },
+      '-=0.25'
     );
 
     // Stats
     tl.fromTo('#heroStats .hero-stat',
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power3.out' },
-      '-=0.3'
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0, duration: 0.35, stagger: 0.06, ease: 'power2.out' },
+      '-=0.2'
     );
 
-    // Image column entrance
-    tl.fromTo('#heroImageCol',
-      { opacity: 0, x: 60, scale: 0.92 },
-      { opacity: 1, x: 0, scale: 1, duration: 1, ease: 'power3.out' },
-      '-=0.8'
-    );
-
-    // Hero float badges (stagger after image)
+    // Hero float badges
     tl.fromTo('.hero-float-badge',
-      { opacity: 0, scale: 0.6, y: 20 },
-      { opacity: 1, scale: 1, y: 0, duration: 0.6, stagger: 0.2, ease: 'back.out(1.8)' },
-      '-=0.5'
+      { opacity: 0, scale: 0.7, y: 15 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.45, stagger: 0.1, ease: 'back.out(1.5)' },
+      0.35
     );
 
     // Dot grids
     tl.fromTo('.hero-dots span',
       { opacity: 0, scale: 0 },
-      { opacity: 1, scale: 1, duration: 0.4, stagger: 0.03, ease: 'back.out(2)' },
-      '-=0.5'
+      { opacity: 1, scale: 1, duration: 0.3, stagger: 0.015, ease: 'back.out(1.5)' },
+      0.3
     );
 
     // Floating badges continuous gentle bobbing
@@ -468,7 +515,7 @@
       repeat: -1,
       yoyo: true,
       ease: 'sine.inOut',
-      delay: 2.5,
+      delay: 0.8,
     });
     gsap.to('.hero-float-badge-2', {
       y: 10,
@@ -476,7 +523,7 @@
       repeat: -1,
       yoyo: true,
       ease: 'sine.inOut',
-      delay: 2.7,
+      delay: 0.9,
     });
 
     // Stamp badge continuous rotation
@@ -3151,6 +3198,7 @@
     if (lenis) window.__lenis = lenis;
 
     initNavbar();
+    initDesktopDropdownHover();
     initSearch();
     initScrollProgress();
     initCardGlows();
