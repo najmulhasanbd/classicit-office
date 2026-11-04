@@ -422,8 +422,12 @@ button {
 }
 
 /* ============================================================
-   TOP INFO BAR
+   SITE HEADER & TOP INFO BAR
    ============================================================ */
+.site-header {
+  display: contents;
+}
+
 #topbar {
   background: var(--clr-topbar-bg);
   border-bottom: 1px solid rgba(37, 99, 235, .12);
